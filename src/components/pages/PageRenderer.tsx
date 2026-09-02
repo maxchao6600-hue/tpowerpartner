@@ -163,21 +163,16 @@ export function PageRenderer({ page, locale, faq, cta }: PageRendererProps) {
                     {section.heading}
                   </h2>
                 )}
-                <ol className="grid gap-0 md:grid-cols-6">
+                <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {section.items.map((step, idx) => (
-                    <li key={step} className="relative flex flex-col items-center px-2 pb-8 md:pb-0">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/30 bg-white/10 font-mono text-[10px] font-bold text-white">
+                    <li key={step.title} className="relative border border-white/15 bg-white/5 p-5">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-charcoal/60 font-mono text-[10px] font-bold text-accent-bright">
                         {String(idx + 1).padStart(2, "0")}
                       </span>
-                      <span className="mt-3 text-center font-mono text-[10px] leading-snug tracking-wider text-white uppercase">
-                        {step}
-                      </span>
-                      {idx < section.items.length - 1 && (
-                        <span className="absolute top-5 hidden h-0.5 w-full bg-white/20 md:block md:left-[calc(50%+20px)] md:w-[calc(100%-40px)]" aria-hidden="true" />
-                      )}
-                      {idx < section.items.length - 1 && (
-                        <span className="my-2 text-accent-bright md:hidden" aria-hidden="true">↓</span>
-                      )}
+                      <h3 className="mt-3 font-display text-sm font-bold uppercase tracking-wide text-white">
+                        {step.title}
+                      </h3>
+                      <p className="mt-2 text-xs leading-relaxed text-white/60">{step.body}</p>
                     </li>
                   ))}
                 </ol>

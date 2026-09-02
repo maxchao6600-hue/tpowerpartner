@@ -7,7 +7,7 @@ export type PageSection =
   | { type: "cards"; heading?: string; items: { tag?: string; title: string; body: string }[] }
   | { type: "grid"; heading?: string; items: { title: string; body: string; href?: string }[] }
   | { type: "steps"; heading?: string; items: { title: string; body: string }[] }
-  | { type: "flow"; heading?: string; items: string[]; disclaimer?: string }
+  | { type: "flow"; heading?: string; items: { title: string; body: string }[]; disclaimer?: string }
   | { type: "list"; heading?: string; items: string[] }
   | { type: "legal"; sections: { title: string; paragraphs: string[] }[] }
   | { type: "notice"; body: string }

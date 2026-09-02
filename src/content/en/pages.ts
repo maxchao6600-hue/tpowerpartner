@@ -117,6 +117,16 @@ export const pages: Record<string, PageContent> = {
           { title: "Grow", body: "Build performance and scale your partnership over time." },
         ],
       },
+      {
+        type: "related",
+        heading: "Related Pages",
+        links: [
+          { label: "Why TPOWER", slug: "why-tpower" },
+          { label: "How It Works", slug: "how-it-works" },
+          { label: "Commission", slug: "commission" },
+          { label: "Register", slug: "register" },
+        ],
+      },
     ],
   ),
 
@@ -165,7 +175,15 @@ export const pages: Record<string, PageContent> = {
       {
         type: "flow",
         heading: "How Commission Is Calculated",
-        items: ["Traffic", "Tracked Activity", "Qualified Actions", "Performance Review", "Reporting", "Payout"],
+        items: [
+          { title: "Traffic", body: "Visitors arrive through your approved partner tracking links and promotional channels." },
+          { title: "Tracked Activity", body: "Campaign clicks, registrations, and player activity are recorded through the partner platform." },
+          { title: "Qualifying Actions", body: "Eligible player actions are identified based on program guidelines and your partner agreement." },
+          { title: "Performance Review", body: "Partner performance is reviewed against the terms defined in your approved agreement." },
+          { title: "Reporting", body: "Approved partners access performance data through dashboard reporting tools." },
+          { title: "Partner Agreement", body: "Commission terms, qualifying criteria, and payout conditions are defined in your official agreement." },
+          { title: "Payout", body: "Approved commissions are processed according to the schedule and thresholds in your agreement." },
+        ],
         disclaimer:
           "Specific commission rates, CPA figures, revenue share percentages, payout schedules and thresholds are confirmed according to the applicable partner agreement.",
       },
@@ -177,6 +195,16 @@ export const pages: Record<string, PageContent> = {
           { tag: "02", title: "Qualifying Actions", body: "Qualifying player actions are documented clearly in your agreement." },
           { tag: "03", title: "Tracking & Reporting", body: "Approved partners receive tracking links and dashboard reporting access." },
           { tag: "04", title: "Payout Information", body: "Payout schedules and thresholds are outlined in your partner agreement." },
+        ],
+      },
+      {
+        type: "related",
+        heading: "Related Pages",
+        links: [
+          { label: "Partner Program", slug: "partner-program" },
+          { label: "Tracking & Reporting", slug: "tracking-reporting" },
+          { label: "Payments", slug: "payments" },
+          { label: "Register", slug: "register" },
         ],
       },
     ],
@@ -269,6 +297,16 @@ export const pages: Record<string, PageContent> = {
           "Access to approved promotional materials",
           "Performance reporting dashboard",
           "Commission based on agreed terms",
+        ],
+      },
+      {
+        type: "related",
+        heading: "Related Pages",
+        links: [
+          { label: "Partner Types", slug: "partner-types" },
+          { label: "Marketing Resources", slug: "marketing-resources" },
+          { label: "Registration Guide", slug: "registration-guide" },
+          { label: "Register", slug: "register" },
         ],
       },
     ],
@@ -397,6 +435,15 @@ export const pages: Record<string, PageContent> = {
       {
         type: "notice",
         body: "Marketing resources are available to approved partners only. Register and complete onboarding to gain access.",
+      },
+      {
+        type: "related",
+        heading: "Related Pages",
+        links: [
+          { label: "Promotional Materials", slug: "promotional-materials" },
+          { label: "Partner Tools", slug: "partner-tools" },
+          { label: "Partner Support", slug: "partner-support" },
+        ],
       },
     ],
   ),

@@ -1,10 +1,10 @@
 export const homeContent = {
   hero: {
     eyebrow: "Official TPOWER Partner Program",
-    title1: "Partner With",
-    title2: "TPOWER Casino.",
+    title1: "Grow With The",
+    title2: "TPOWER Network.",
     description:
-      "Join the official TPOWER Partner Program — partner tools, tracking links, promotional assets, and dedicated support to build acquisition around a premium online casino brand.",
+      "Partner with the official TPOWER Partner Program and build your next growth opportunity through dedicated partner resources, tracking, support and performance-focused opportunities.",
     trustLabel: "Official TPOWER Partner Platform",
   },
   identity: {
@@ -78,7 +78,14 @@ export const homeContent = {
     label: "Performance Framework",
     title: "How Commission Works",
     body: "Commission is performance-based and defined in your partner agreement. Full details are provided upon approval.",
-    flow: ["Traffic", "Tracked Activity", "Qualified Actions", "Performance Review", "Reporting", "Payout"],
+    flow: [
+      { title: "Traffic", body: "Partner-driven visitors arrive through approved tracking links." },
+      { title: "Tracked Activity", body: "Campaign activity is recorded through the partner platform." },
+      { title: "Qualified Actions", body: "Eligible player actions are identified per program guidelines." },
+      { title: "Performance Review", body: "Results are reviewed against your partner agreement." },
+      { title: "Reporting", body: "Performance data is available through partner reporting tools." },
+      { title: "Payout", body: "Approved commissions are processed according to your agreement." },
+    ],
     disclaimer:
       "Specific commission rates, CPA figures, revenue share percentages, payout schedules and thresholds are confirmed according to the applicable partner agreement.",
     link: "Commission Details",

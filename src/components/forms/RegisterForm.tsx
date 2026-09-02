@@ -124,19 +124,7 @@ export function RegisterForm() {
                 </select>
                 {errors.partnerType && <p className="mt-1 text-xs text-red-400">{errors.partnerType}</p>}
               </div>
-              <div>
-                <label htmlFor="website-source" className="mb-2 block font-mono text-[10px] tracking-[0.15em] text-white/40 uppercase">
-                  {f.websiteSource}
-                </label>
-                <input id="website-source" name="websiteSource" type="url" autoComplete="url" className={inputClass("websiteSource")} />
-              </div>
-              <div>
-                <label htmlFor="country" className="mb-2 block font-mono text-[10px] tracking-[0.15em] text-white/40 uppercase">
-                  {f.country}
-                </label>
-                <input id="country" name="country" type="text" autoComplete="country-name" className={inputClass("country")} />
-              </div>
-              <Button type="submit" className="w-full" disabled={loading}>
+              <Button type="submit" className="w-full" disabled={loading} aria-busy={loading}>
                 {loading ? f.loading : f.submitRegister}
               </Button>
               <p className="text-center text-xs text-white/45">
@@ -144,6 +132,7 @@ export function RegisterForm() {
                   {dict.ui.cta.alreadyPartner}
                 </Link>
               </p>
+              <p className="text-center font-mono text-[9px] tracking-[0.15em] text-white/30 uppercase">{f.officialPlatform}</p>
             </form>
           )}
         </div>

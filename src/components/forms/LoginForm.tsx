@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState, type FormEvent } from "react";
-import Link from "next/link";
 import { brandAssets } from "@/lib/assets";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -13,6 +12,7 @@ import { localizedPath } from "@/lib/i18n/paths";
 export function LoginForm() {
   const { locale, dict } = useLocale();
   const f = dict.ui.forms;
+  const cta = dict.ui.cta;
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -44,16 +44,16 @@ export function LoginForm() {
 
   return (
     <section className="relative min-h-screen pt-[72px]">
-      <div className="relative h-[200px] lg:hidden">
-        <Image src={brandAssets.partnerHeroMobile} alt="" fill priority sizes="100vw" className="object-cover object-[center_40%]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-charcoal" aria-hidden="true" />
+      <div className="relative h-[180px] sm:h-[220px] lg:hidden">
+        <Image src={brandAssets.partnerHeroMobile} alt="" fill priority sizes="100vw" className="object-cover object-[center_42%]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 to-charcoal" aria-hidden="true" />
       </div>
       <div className="absolute inset-0 hidden lg:block" aria-hidden="true">
-        <Image src={brandAssets.partnerHero} alt="" fill priority sizes="100vw" className="object-cover object-[60%_center]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/92 to-charcoal/75" />
+        <Image src={brandAssets.partnerHero} alt="" fill priority sizes="100vw" className="object-cover object-[58%_center]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/94 to-charcoal/78" />
       </div>
 
-      <Container className="relative grid min-h-[calc(100vh-72px)] items-start gap-10 py-12 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-16">
+      <Container className="relative grid min-h-[calc(100vh-72px)] items-start gap-10 py-10 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-16">
         <div className="hidden lg:block">
           <Logo variant="on-dark" className="mb-8" />
           <p className="mb-3 font-mono text-[10px] tracking-[0.3em] text-accent-bright uppercase">{f.portalLabel}</p>
@@ -61,6 +61,10 @@ export function LoginForm() {
             {f.welcomeBack}
           </h1>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60 md:text-base">{f.loginSubtitle}</p>
+          <div className="relative mt-8 aspect-[16/10] max-w-md overflow-hidden border border-white/10 red-glow">
+            <Image src={brandAssets.partnerHero} alt="" fill sizes="400px" className="object-cover object-[55%_center]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent" aria-hidden="true" />
+          </div>
           <p className="mt-6 flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] text-white/40 uppercase">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-bright" aria-hidden="true" />
             {f.officialPlatform}
@@ -97,15 +101,14 @@ export function LoginForm() {
                 <input id="login-password" name="password" type="password" autoComplete="current-password" className={inputClass("password")} aria-invalid={!!errors.password} />
                 {errors.password && <p className="mt-1 text-xs text-red-400">{errors.password}</p>}
               </div>
-              <Button type="submit" className="w-full" disabled={loading}>
+              <Button type="submit" className="w-full" disabled={loading} aria-busy={loading}>
                 {loading ? f.loading : f.submitLogin}
               </Button>
-              <div className="flex flex-col items-center gap-2 text-xs text-white/45">
-                <Link href={localizedPath(locale, "register")} className="text-accent-bright hover:underline">
-                  {dict.ui.cta.noAccount}
-                </Link>
-                <span className="text-white/30">{dict.ui.cta.forgotPassword}</span>
-              </div>
+              <Button variant="secondary" href={localizedPath(locale, "register")} className="w-full">
+                {cta.register}
+              </Button>
+              <p className="text-center text-xs text-white/30">{cta.forgotPassword}</p>
+              <p className="text-center font-mono text-[9px] tracking-[0.15em] text-white/30 uppercase">{f.officialPlatform}</p>
             </form>
           )}
         </div>

@@ -3,10 +3,10 @@ import type { HomeContent } from "@/content/en/home";
 export const homeContent: HomeContent = {
   hero: {
     eyebrow: "TPOWER 官方合作伙伴计划",
-    title1: "与 TPOWER 赌场",
-    title2: "建立合作关系。",
+    title1: "与 TPOWER 网络",
+    title2: "共同成长。",
     description:
-      "加入 TPOWER 官方合作伙伴计划——获取合作伙伴工具、追踪链接、推广素材与专业支持，围绕高端在线赌场品牌构建获客渠道。",
+      "加入 TPOWER 官方合作伙伴计划，借助专属合作伙伴资源、数据追踪、专业支持与绩效导向的合作机会，构建您的下一个增长机遇。",
     trustLabel: "TPOWER 官方合作伙伴平台",
   },
   identity: {
@@ -80,7 +80,14 @@ export const homeContent: HomeContent = {
     label: "绩效框架",
     title: "佣金如何运作",
     body: "佣金基于绩效，具体条款在合作伙伴协议中约定，详情在获批后提供。",
-    flow: ["流量", "追踪活动", "合格行为", "绩效审核", "数据报表", "结算"],
+    flow: [
+      { title: "流量", body: "通过获批追踪链接引入的合作伙伴流量。" },
+      { title: "追踪活动", body: "推广活动在合作伙伴平台中记录。" },
+      { title: "合格行为", body: "根据计划指南识别符合条件的玩家行为。" },
+      { title: "绩效审核", body: "依据合作伙伴协议审核推广结果。" },
+      { title: "数据报表", body: "通过合作伙伴报表工具查看绩效数据。" },
+      { title: "结算", body: "获批佣金按协议约定处理。" },
+    ],
     disclaimer:
       "具体佣金比例、CPA 金额、revenue share 百分比、结算周期与门槛均依据适用的合作伙伴协议确认。",
     link: "佣金详情",

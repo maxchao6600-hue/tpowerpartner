@@ -24,20 +24,21 @@ export function HomePage({ locale, dict }: HomePageProps) {
       {/* 1. Premium Hero */}
       <section className="relative overflow-hidden bg-charcoal pt-[72px]">
         <CasinoAmbience variant="hero" />
-        <div className="relative h-[260px] sm:h-[320px] lg:hidden">
+        <div className="relative h-[220px] sm:h-[280px] lg:hidden">
           <Image
             src={brandAssets.partnerHeroMobile}
             alt=""
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[center_40%]"
+            className="object-cover object-[center_42%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-transparent to-charcoal" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/20 to-charcoal" aria-hidden="true" />
         </div>
         <Container className="relative">
-          <div className="grid min-h-[min(82vh,860px)] items-center lg:grid-cols-[minmax(0,44%)_minmax(0,56%)] lg:gap-8">
-            <div className="relative z-10 flex flex-col justify-center py-10 lg:py-20 lg:pr-8">
+          <div className="grid min-h-0 items-center py-8 lg:min-h-[min(78vh,820px)] lg:grid-cols-[minmax(0,44%)_minmax(0,56%)] lg:gap-8 lg:py-0">
+            <div className="relative z-10 flex flex-col justify-center py-6 lg:py-20 lg:pr-8">
+              <div className="rounded-sm border border-white/5 bg-charcoal/40 p-6 backdrop-blur-sm lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
               <p className="mb-5 inline-flex w-fit items-center gap-2 border border-accent/45 bg-accent/10 px-4 py-1.5 font-mono text-[10px] tracking-[0.28em] text-accent-bright uppercase">
                 {h.hero.eyebrow}
               </p>
@@ -61,8 +62,9 @@ export function HomePage({ locale, dict }: HomePageProps) {
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-bright" aria-hidden="true" />
                 {h.hero.trustLabel}
               </p>
+              </div>
             </div>
-            <div className="relative hidden min-h-[540px] lg:block xl:min-h-[640px]">
+            <div className="relative hidden min-h-[480px] lg:block xl:min-h-[580px]">
               <div className="hero-artwork-panel absolute inset-y-6 right-0 left-0 overflow-hidden border border-white/5">
                 <Image
                   src={brandAssets.partnerHero}
@@ -239,12 +241,16 @@ export function HomePage({ locale, dict }: HomePageProps) {
               </div>
             </div>
             <div>
-              <div className="flex flex-col md:flex-row md:flex-wrap md:items-center md:gap-0">
-                {h.commission.flow.map((step) => (
-                  <div key={step} className="flow-arrow">
-                    <span className="inline-block border border-white/20 bg-white/10 px-4 py-2.5 font-mono text-[10px] tracking-wider text-white uppercase">
-                      {step}
+              <div className="flex flex-col gap-3 md:gap-4">
+                {h.commission.flow.map((step, i) => (
+                  <div key={step.title} className="flex gap-4 border border-white/15 bg-white/5 p-4">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-accent font-mono text-[10px] font-bold text-white">
+                      {String(i + 1).padStart(2, "0")}
                     </span>
+                    <div>
+                      <p className="font-mono text-[10px] tracking-wider text-white uppercase">{step.title}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-white/55">{step.body}</p>
+                    </div>
                   </div>
                 ))}
               </div>

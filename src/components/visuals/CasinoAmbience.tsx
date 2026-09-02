@@ -3,7 +3,7 @@ type CasinoAmbienceProps = {
 };
 
 export function CasinoAmbience({ variant = "section" }: CasinoAmbienceProps) {
-  const opacity = variant === "hero" ? "opacity-[0.07]" : variant === "subtle" ? "opacity-[0.04]" : "opacity-[0.06]";
+  const opacity = variant === "hero" ? "opacity-[0.09]" : variant === "subtle" ? "opacity-[0.05]" : "opacity-[0.07]";
 
   return (
     <div className={`pointer-events-none absolute inset-0 overflow-hidden ${opacity}`} aria-hidden="true">

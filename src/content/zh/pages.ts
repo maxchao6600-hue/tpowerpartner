@@ -117,6 +117,16 @@ export const pages: Record<string, PageContent> = {
           { title: "持续成长", body: "积累业绩，逐步扩大合作规模。" },
         ],
       },
+      {
+        type: "related",
+        heading: "相关页面",
+        links: [
+          { label: "为何选择 TPOWER", slug: "why-tpower" },
+          { label: "合作流程", slug: "how-it-works" },
+          { label: "佣金", slug: "commission" },
+          { label: "注册", slug: "register" },
+        ],
+      },
     ],
   ),
 
@@ -165,7 +175,15 @@ export const pages: Record<string, PageContent> = {
       {
         type: "flow",
         heading: "佣金如何计算",
-        items: ["流量", "追踪活动", "合格行为", "绩效审核", "数据报表", "结算"],
+        items: [
+          { title: "流量", body: "访客通过您获批的合作伙伴追踪链接与推广渠道进入。" },
+          { title: "追踪活动", body: "推广点击、注册与玩家活动通过合作伙伴平台记录。" },
+          { title: "合格行为", body: "根据计划指南与合作伙伴协议识别符合条件的玩家行为。" },
+          { title: "绩效审核", body: "依据获批协议中的条款审核合作伙伴绩效。" },
+          { title: "数据报表", body: "获批合作伙伴通过后台报表工具查看绩效数据。" },
+          { title: "合作伙伴协议", body: "佣金条款、合格标准与结算条件在正式协议中约定。" },
+          { title: "结算", body: "获批佣金按协议约定的周期与门槛处理。" },
+        ],
         disclaimer:
           "具体佣金比例、CPA 金额、revenue share 百分比、结算周期与门槛均依据适用的合作伙伴协议确认。",
       },
@@ -177,6 +195,16 @@ export const pages: Record<string, PageContent> = {
           { tag: "02", title: "有效行为", body: "有效玩家行为标准在协议中清晰列明。" },
           { tag: "03", title: "追踪与报表", body: "获批合作伙伴将获得追踪链接及后台报表访问权限。" },
           { tag: "04", title: "结算信息", body: "结算周期与门槛在合作伙伴协议中说明。" },
+        ],
+      },
+      {
+        type: "related",
+        heading: "相关页面",
+        links: [
+          { label: "合作伙伴计划", slug: "partner-program" },
+          { label: "数据追踪与报告", slug: "tracking-reporting" },
+          { label: "结算", slug: "payments" },
+          { label: "注册", slug: "register" },
         ],
       },
     ],
@@ -269,6 +297,16 @@ export const pages: Record<string, PageContent> = {
           "访问获批推广素材",
           "业绩报表后台",
           "按约定条款结算佣金",
+        ],
+      },
+      {
+        type: "related",
+        heading: "相关页面",
+        links: [
+          { label: "合作伙伴类型", slug: "partner-types" },
+          { label: "营销资源", slug: "marketing-resources" },
+          { label: "注册指南", slug: "registration-guide" },
+          { label: "注册", slug: "register" },
         ],
       },
     ],
@@ -397,6 +435,15 @@ export const pages: Record<string, PageContent> = {
       {
         type: "notice",
         body: "营销资源仅向获批合作伙伴开放。请注册并完成入驻流程以获取访问权限。",
+      },
+      {
+        type: "related",
+        heading: "相关页面",
+        links: [
+          { label: "推广素材", slug: "promotional-materials" },
+          { label: "合作伙伴工具", slug: "partner-tools" },
+          { label: "合作伙伴支持", slug: "partner-support" },
+        ],
       },
     ],
   ),
