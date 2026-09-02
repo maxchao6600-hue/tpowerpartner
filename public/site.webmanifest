@@ -1,0 +1,21 @@
+{
+  "name": "TPOWER Partner",
+  "short_name": "TPOWER Partner",
+  "description": "Official TPOWER Casino Partner Program",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#e31837",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

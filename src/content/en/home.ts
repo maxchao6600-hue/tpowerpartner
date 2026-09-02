@@ -1,52 +1,52 @@
 export const homeContent = {
   hero: {
     eyebrow: "Official TPOWER Partner Program",
-    title1: "Grow With The",
-    title2: "TPOWER Network.",
+    title1: "Partner With",
+    title2: "TPOWER Casino.",
     description:
-      "Partner with the official TPOWER Partner Program and build a stronger acquisition channel with dedicated partner resources, tracking, support and performance-focused opportunities.",
+      "Join the official TPOWER Partner Program — partner tools, tracking links, promotional assets, and dedicated support to build acquisition around a premium online casino brand.",
     trustLabel: "Official TPOWER Partner Platform",
   },
   identity: {
     label: "Official TPOWER Partner",
-    title1: "The Premium Business",
-    title2: "Gateway Into TPOWER.",
+    title1: "The Official Path Into",
+    title2: "TPOWER Casino.",
     description:
-      "TPOWER Partner is the official partner platform for TPOWER Casino — not a third-party affiliate network. Register to join the program, or login if you already have partner access.",
+      "TPOWER Partner is the official platform for affiliates and agents working with TPOWER Casino. Register to apply, or login if you already have partner access.",
     cardTitle1: "TPOWER Casino",
     cardTitle2: "Partner Program",
     cardBody:
-      "One brand family. One official partner destination. Premium casino atmosphere with a partner-focused purpose.",
+      "Official registration, partner dashboard access, tracking tools, and promotional resources — all through one TPOWER-branded partner platform.",
   },
   casino: {
-    label: "Casino Atmosphere",
-    title1: "The TPOWER",
-    title2: "Experience.",
+    label: "Premium Casino Brand",
+    title1: "Casino Atmosphere.",
+    title2: "Partner Performance.",
     description:
-      "Partners promote a premium online casino built for entertainment, energy, and player engagement — then connect that experience to performance-based partnership growth.",
+      "TPOWER is a premium online casino built for entertainment and player engagement. Partners connect that brand to traffic, campaigns, and performance-based growth.",
   },
   why: {
     label: "Why Partner With TPOWER",
-    title1: "Built For Partners",
-    title2: "Who Perform.",
+    title1: "A Casino Brand",
+    title2: "Partners Can Promote.",
     description:
-      "The official TPOWER Partner Program connects affiliates, agents, and traffic partners with a premium online casino brand.",
+      "Affiliates, agents, and traffic partners work with a recognizable TPOWER casino identity — supported by tools, reporting, and a structured partner program.",
     reasons: [
-      { title: "Brand", description: "Promote a recognizable TPOWER casino identity with premium entertainment positioning.", icon: "♠" },
-      { title: "Support", description: "Dedicated partner assistance through registration, onboarding, and ongoing program participation.", icon: "♦" },
-      { title: "Tools", description: "Marketing and promotional resources for approved partners, with reporting where supported.", icon: "♣" },
-      { title: "Performance", description: "Track partner activity and campaign results through the official partner platform.", icon: "♥" },
+      { title: "Brand", description: "Promote TPOWER with approved casino brand assets and premium entertainment positioning.", icon: "♠" },
+      { title: "Support", description: "Partner assistance from application review through onboarding and ongoing program participation.", icon: "♦" },
+      { title: "Tools", description: "Tracking links, promotional materials, and dashboard access for approved partners.", icon: "♣" },
+      { title: "Performance", description: "Monitor campaign activity and results through the official partner platform.", icon: "♥" },
     ],
   },
   benefits: {
     label: "Partnership Advantages",
     title: "What Approved Partners Access",
     items: [
-      { num: "01", title: "Official Brand Access", body: "Promote TPOWER with approved brand assets and casino positioning." },
-      { num: "02", title: "Partner Support", body: "Assistance through registration, onboarding, and program participation." },
-      { num: "03", title: "Marketing Resources", body: "Access promotional materials through the partner dashboard upon approval." },
-      { num: "04", title: "Tracking & Reporting", body: "Unique links and performance visibility for your campaigns." },
-      { num: "05", title: "Growth Path", body: "Scale your partnership based on performance and program guidelines." },
+      { num: "01", title: "Official Brand Access", body: "Approved TPOWER logos, visuals, and brand usage guidelines for your campaigns." },
+      { num: "02", title: "Partner Support", body: "Help with registration, onboarding, account access, and program questions." },
+      { num: "03", title: "Marketing Resources", body: "Banners, creatives, and campaign materials through the partner dashboard." },
+      { num: "04", title: "Tracking & Reporting", body: "Unique tracking links and performance visibility for your promotions." },
+      { num: "05", title: "Growth Path", body: "Expand your partnership over time based on performance and program guidelines." },
     ],
   },
   partnerTypes: {
@@ -76,10 +76,11 @@ export const homeContent = {
   },
   commission: {
     label: "Performance Framework",
-    title: "Commission Structure",
-    body: "Performance-based commission defined in your partner agreement. Details provided upon approval.",
-    flow: ["Traffic", "Tracked Activity", "Qualified Actions", "Performance Review", "Partner Reporting", "Approved Payout"],
-    disclaimer: "Specific commission rates, CPA figures and revenue share percentages are confirmed according to the applicable partner agreement.",
+    title: "How Commission Works",
+    body: "Commission is performance-based and defined in your partner agreement. Full details are provided upon approval.",
+    flow: ["Traffic", "Tracked Activity", "Qualified Actions", "Performance Review", "Reporting", "Payout"],
+    disclaimer:
+      "Specific commission rates, CPA figures, revenue share percentages, payout schedules and thresholds are confirmed according to the applicable partner agreement.",
     link: "Commission Details",
   },
   resources: {
@@ -120,8 +121,8 @@ export const homeContent = {
     link: "View All FAQ",
   },
   cta: {
-    title: "Ready To Partner?",
-    body: "Register for the TPOWER Partner Program or login to your existing account.",
+    title: "Apply To Partner With TPOWER",
+    body: "Register through the official partner platform or sign in to your existing account.",
     trustLabel: "Official TPOWER Partner Program",
   },
 };

@@ -63,13 +63,17 @@ export function RegisterForm() {
             {f.becomePartner}
           </h1>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60 md:text-base">{f.registerSubtitle}</p>
+          <div className="relative mt-8 aspect-[16/10] max-w-md overflow-hidden border border-white/10 red-glow">
+            <Image src={brandAssets.partnerHero} alt="" fill sizes="400px" className="object-cover object-[55%_center]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent" aria-hidden="true" />
+          </div>
           <p className="mt-6 flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] text-white/40 uppercase">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-bright" aria-hidden="true" />
             {f.officialPlatform}
           </p>
         </div>
 
-        <div className="rounded-xl border border-accent/20 bg-charcoal-mid/90 p-7 backdrop-blur-md red-glow lg:p-9">
+        <div className="rounded-xl border border-accent/25 bg-charcoal-mid/95 p-7 shadow-[0_0_60px_rgba(227,24,55,0.12)] backdrop-blur-md red-glow lg:p-9">
           <div className="mb-6 lg:hidden">
             <p className="font-mono text-[10px] tracking-[0.3em] text-accent-bright uppercase">{f.portalLabel}</p>
             <h1 className="mt-2 font-display text-2xl font-extrabold uppercase text-white">{f.becomePartner}</h1>

@@ -159,21 +159,30 @@ export function PageRenderer({ page, locale, faq, cta }: PageRendererProps) {
             <section key={i} className="casino-bg-red py-16 lg:py-24">
               <Container>
                 {section.heading && (
-                  <h2 className="mb-10 font-display text-2xl font-extrabold uppercase text-white">
+                  <h2 className="mb-12 font-display text-2xl font-extrabold uppercase text-white lg:text-3xl">
                     {section.heading}
                   </h2>
                 )}
-                <div className="flex flex-col md:flex-row md:flex-wrap md:items-center">
-                  {section.items.map((step) => (
-                    <div key={step} className="flow-arrow">
-                      <span className="inline-block border border-white/20 bg-white/10 px-4 py-2.5 font-mono text-[10px] tracking-wider text-white uppercase">
+                <ol className="grid gap-0 md:grid-cols-6">
+                  {section.items.map((step, idx) => (
+                    <li key={step} className="relative flex flex-col items-center px-2 pb-8 md:pb-0">
+                      <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/30 bg-white/10 font-mono text-[10px] font-bold text-white">
+                        {String(idx + 1).padStart(2, "0")}
+                      </span>
+                      <span className="mt-3 text-center font-mono text-[10px] leading-snug tracking-wider text-white uppercase">
                         {step}
                       </span>
-                    </div>
+                      {idx < section.items.length - 1 && (
+                        <span className="absolute top-5 hidden h-0.5 w-full bg-white/20 md:block md:left-[calc(50%+20px)] md:w-[calc(100%-40px)]" aria-hidden="true" />
+                      )}
+                      {idx < section.items.length - 1 && (
+                        <span className="my-2 text-accent-bright md:hidden" aria-hidden="true">↓</span>
+                      )}
+                    </li>
                   ))}
-                </div>
+                </ol>
                 {section.disclaimer && (
-                  <p className="mt-8 border-l-2 border-white/30 pl-4 text-xs leading-relaxed text-white/50 italic">
+                  <p className="mt-10 border-l-2 border-white/30 pl-4 text-xs leading-relaxed text-white/50 italic">
                     {section.disclaimer}
                   </p>
                 )}

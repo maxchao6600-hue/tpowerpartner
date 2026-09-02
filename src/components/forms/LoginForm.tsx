@@ -67,7 +67,7 @@ export function LoginForm() {
           </p>
         </div>
 
-        <div className="rounded-xl border border-accent/20 bg-charcoal-mid/90 p-7 backdrop-blur-md red-glow lg:p-9">
+        <div className="rounded-xl border border-accent/25 bg-charcoal-mid/95 p-7 shadow-[0_0_60px_rgba(227,24,55,0.12)] backdrop-blur-md red-glow lg:p-9">
           <div className="mb-6 lg:hidden">
             <p className="font-mono text-[10px] tracking-[0.3em] text-accent-bright uppercase">{f.portalLabel}</p>
             <h1 className="mt-2 font-display text-2xl font-extrabold uppercase text-white">{f.welcomeBack}</h1>

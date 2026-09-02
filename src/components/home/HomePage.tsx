@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { CasinoAmbience } from "@/components/visuals/CasinoAmbience";
 
 type HomePageProps = {
   locale: Locale;
@@ -22,6 +23,7 @@ export function HomePage({ locale, dict }: HomePageProps) {
     <>
       {/* 1. Premium Hero */}
       <section className="relative overflow-hidden bg-charcoal pt-[72px]">
+        <CasinoAmbience variant="hero" />
         <div className="relative h-[260px] sm:h-[320px] lg:hidden">
           <Image
             src={brandAssets.partnerHeroMobile}
@@ -114,7 +116,9 @@ export function HomePage({ locale, dict }: HomePageProps) {
       {/* 3. Casino Atmosphere — full-width image */}
       <section className="relative min-h-[480px] overflow-hidden lg:min-h-[560px]">
         <Image src={brandAssets.joinCta} alt="" fill sizes="100vw" className="object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/40" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/50" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(227,24,55,0.15)_0%,transparent_60%)]" aria-hidden="true" />
+        <CasinoAmbience variant="subtle" />
         <Container className="relative flex min-h-[480px] items-center py-20 lg:min-h-[560px]">
           <div className="max-w-2xl">
             <p className="mb-4 font-mono text-[10px] tracking-[0.3em] text-accent-bright uppercase">{h.casino.label}</p>
@@ -132,8 +136,9 @@ export function HomePage({ locale, dict }: HomePageProps) {
       </section>
 
       {/* 4. Why Partner — asymmetric grid with suit icons */}
-      <section className="casino-bg-crimson py-20 lg:py-28">
-        <Container>
+      <section className="relative casino-bg-crimson py-20 lg:py-28">
+        <CasinoAmbience variant="section" />
+        <Container className="relative">
           <div className="mb-14 max-w-3xl">
             <p className="mb-4 font-mono text-[10px] tracking-[0.3em] text-accent-bright uppercase">{h.why.label}</p>
             <h2 className="font-display text-[clamp(2rem,5vw,3.25rem)] font-extrabold uppercase leading-[1.05] text-white">
@@ -180,8 +185,9 @@ export function HomePage({ locale, dict }: HomePageProps) {
       </section>
 
       {/* 6. Partner Types — editorial cards */}
-      <section className="casino-bg-dark py-20 lg:py-28">
-        <Container>
+      <section className="relative casino-bg-dark py-20 lg:py-28">
+        <CasinoAmbience variant="subtle" />
+        <Container className="relative">
           <p className="mb-4 font-mono text-[10px] tracking-[0.3em] text-accent-bright uppercase">{h.partnerTypes.label}</p>
           <h2 className="font-display text-3xl font-extrabold uppercase text-white lg:text-4xl">{h.partnerTypes.title}</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

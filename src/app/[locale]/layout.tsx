@@ -7,7 +7,6 @@ import { LocaleProvider } from "@/components/providers/LocaleProvider";
 import { createPageMetadata } from "@/lib/metadata";
 import { getDictionary } from "@/lib/dictionary";
 import { isLocale, locales, htmlLang, type Locale } from "@/lib/i18n/config";
-import { brandAssets } from "@/lib/assets";
 import { siteConfig } from "@/lib/site";
 
 const inter = Inter({
@@ -53,11 +52,13 @@ export async function generateMetadata({
 
 function JsonLd({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
-  const schema = {
+  const baseUrl = `${siteConfig.url}/${locale}`;
+
+  const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: dict.ui.site.name,
-    url: `${siteConfig.url}/${locale}`,
+    name: siteConfig.name,
+    url: baseUrl,
     description: dict.ui.site.description,
     contactPoint: {
       "@type": "ContactPoint",
@@ -66,11 +67,20 @@ function JsonLd({ locale }: { locale: Locale }) {
     },
   };
 
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.name,
+    url: baseUrl,
+    description: dict.ui.site.description,
+    inLanguage: locale === "zh" ? "zh-CN" : "en",
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }} />
+    </>
   );
 }
 
@@ -97,7 +107,6 @@ export default async function LocaleLayout({
     >
       <head>
         <JsonLd locale={raw} />
-        <link rel="icon" href={brandAssets.favicon} sizes="any" />
       </head>
       <body
         className={`flex min-h-full flex-col bg-charcoal font-sans text-white ${

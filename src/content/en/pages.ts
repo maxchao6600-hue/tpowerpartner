@@ -163,6 +163,13 @@ export const pages: Record<string, PageContent> = {
     },
     [
       {
+        type: "flow",
+        heading: "How Commission Is Calculated",
+        items: ["Traffic", "Tracked Activity", "Qualified Actions", "Performance Review", "Reporting", "Payout"],
+        disclaimer:
+          "Specific commission rates, CPA figures, revenue share percentages, payout schedules and thresholds are confirmed according to the applicable partner agreement.",
+      },
+      {
         type: "cards",
         heading: "Commission Framework",
         items: [
@@ -171,16 +178,6 @@ export const pages: Record<string, PageContent> = {
           { tag: "03", title: "Tracking & Reporting", body: "Approved partners receive tracking links and dashboard reporting access." },
           { tag: "04", title: "Payout Information", body: "Payout schedules and thresholds are outlined in your partner agreement." },
         ],
-      },
-      {
-        type: "flow",
-        heading: "Commission Flow",
-        items: ["Traffic", "Tracked Activity", "Qualified Actions", "Performance Review", "Partner Reporting", "Approved Payout"],
-        disclaimer: "Specific commission rates, CPA figures and revenue share percentages are confirmed according to the applicable partner agreement.",
-      },
-      {
-        type: "notice",
-        body: "Specific commission rates, CPA figures, and revenue share percentages are not published until your partner agreement is confirmed.",
       },
     ],
   ),

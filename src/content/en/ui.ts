@@ -107,9 +107,9 @@ export const ui: UiDictionary = {
     applicationSubmitted: "Application Submitted",
     applicationThanks: "Our team will review your registration and contact you shortly.",
     welcomeBack: "Welcome Back, Partner",
-    loginSubtitle: "Sign in to your TPOWER Partner account.",
+    loginSubtitle: "Sign in to access your TPOWER Partner account.",
     registerSubtitle:
-      "Register through the official TPOWER Partner platform and join the TPOWER casino partner ecosystem.",
+      "Apply through the official TPOWER Partner platform and begin the partner review process.",
     becomePartner: "Become A TPOWER Partner",
     contactTitle: "Contact Partner Support",
     contactSubtitle: "Reach the TPOWER Partner team for program and account questions.",

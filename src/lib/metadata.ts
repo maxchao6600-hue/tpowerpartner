@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { locales, type Locale, ogLocale } from "@/lib/i18n/config";
 import { localizedPath, type PageSlug } from "@/lib/i18n/paths";
 import { siteConfig } from "@/lib/site";
-import { brandAssets } from "@/lib/assets";
+import { brandAssets, siteIcons } from "@/lib/assets";
 
 type PageMeta = {
   title: string;
@@ -40,7 +40,14 @@ export function createPageMetadata({
   return {
     title: fullTitle,
     description,
+    applicationName: siteConfig.name,
     metadataBase: new URL(siteConfig.url),
+    icons: {
+      icon: [...siteIcons.icon],
+      apple: [...siteIcons.apple],
+      shortcut: [...siteIcons.shortcut],
+    },
+    manifest: brandAssets.webManifest,
     alternates: {
       canonical: url,
       languages,

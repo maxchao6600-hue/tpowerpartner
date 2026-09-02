@@ -163,6 +163,13 @@ export const pages: Record<string, PageContent> = {
     },
     [
       {
+        type: "flow",
+        heading: "佣金如何计算",
+        items: ["流量", "追踪活动", "合格行为", "绩效审核", "数据报表", "结算"],
+        disclaimer:
+          "具体佣金比例、CPA 金额、revenue share 百分比、结算周期与门槛均依据适用的合作伙伴协议确认。",
+      },
+      {
         type: "cards",
         heading: "佣金框架",
         items: [
@@ -171,16 +178,6 @@ export const pages: Record<string, PageContent> = {
           { tag: "03", title: "追踪与报表", body: "获批合作伙伴将获得追踪链接及后台报表访问权限。" },
           { tag: "04", title: "结算信息", body: "结算周期与门槛在合作伙伴协议中说明。" },
         ],
-      },
-      {
-        type: "flow",
-        heading: "佣金流程",
-        items: ["流量", "追踪活动", "合格行为", "绩效审核", "合作伙伴报表", "获批结算"],
-        disclaimer: "具体佣金比例、CPA 金额及 revenue share 百分比均依据适用的合作伙伴协议确认。",
-      },
-      {
-        type: "notice",
-        body: "具体佣金比例、CPA 金额及收入分成百分比，在合作伙伴协议确认前不会对外公布。",
       },
     ],
   ),
