@@ -16,9 +16,9 @@ export function Container({
   );
 }
 
-export function SectionLabel({ children }: { children: ReactNode }) {
+export function SectionLabel({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <span className="mb-4 block font-mono text-[11px] font-medium tracking-[0.2em] text-accent uppercase">
+    <span className={`mb-4 block font-mono text-[11px] font-medium tracking-[0.2em] text-accent uppercase ${className}`}>
       {children}
     </span>
   );

@@ -1,43 +1,68 @@
-import { Container, SectionHeading, SectionLabel } from "@/components/ui/Container";
+import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 
 const partnerTypes = [
-  { title: "Affiliate Marketers", description: "Performance-driven marketers with established traffic channels and campaign expertise." },
-  { title: "Content Creators", description: "Creators who produce engaging content and build audiences across platforms." },
-  { title: "Media Buyers", description: "Professionals who manage paid acquisition across display, social, and search channels." },
-  { title: "Website Owners", description: "Publishers and site owners with established web properties and organic traffic." },
-  { title: "Social Communities", description: "Community operators who engage audiences through social platforms and groups." },
-  { title: "Traffic Partners", description: "Partners with diversified traffic sources seeking performance-based monetization." },
+  {
+    num: "01",
+    title: "Affiliate Partners",
+    description: "Performance marketers promoting TPOWER through approved affiliate channels.",
+  },
+  {
+    num: "02",
+    title: "Website Owners",
+    description: "Site operators integrating TPOWER partner campaigns into owned traffic destinations.",
+  },
+  {
+    num: "03",
+    title: "Content Creators",
+    description: "Creators building audience-led campaigns around the TPOWER casino brand.",
+  },
+  {
+    num: "04",
+    title: "Social Media Partners",
+    description: "Partners driving awareness and traffic through social platforms and communities.",
+  },
+  {
+    num: "05",
+    title: "Traffic Partners",
+    description: "Specialists focused on acquisition funnels and qualified player traffic.",
+  },
+  {
+    num: "06",
+    title: "Agents",
+    description: "Agents managing partner relationships and promotional activity within program guidelines.",
+  },
 ];
 
 export function PartnerTypesSection() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-white py-20 lg:py-28">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" aria-hidden="true" />
       <Container>
-        <div className="mb-16 max-w-2xl">
-          <SectionLabel>Partner Types</SectionLabel>
-          <SectionHeading as="h2">
-            Built for professional traffic partners.
-          </SectionHeading>
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="mb-3 font-mono text-[10px] tracking-[0.3em] text-accent uppercase">Partner Types</p>
+            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] font-extrabold uppercase text-charcoal">
+              Who Can <span className="text-accent">Join?</span>
+            </h2>
+          </div>
+          <Button href="/register">Register Now</Button>
         </div>
 
-        <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {partnerTypes.map((type, i) => (
-            <div
-              key={type.title}
-              className={`bg-warm-white p-8 lg:p-10 ${
-                i === 1 || i === 4 ? "lg:mt-8" : ""
-              }`}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {partnerTypes.map((type) => (
+            <article
+              key={type.num}
+              className="group relative overflow-hidden border border-charcoal/10 bg-charcoal p-6 transition-all hover:border-accent hover:red-glow lg:p-7"
             >
-              <span className="font-mono text-[10px] tracking-[0.2em] text-muted uppercase">
-                {String(i + 1).padStart(2, "0")}
+              <span className="font-display text-4xl font-extrabold text-accent-bright/80 transition-colors group-hover:text-accent-bright">
+                {type.num}
               </span>
-              <h3 className="mt-4 font-display text-xl font-semibold text-foreground">
+              <h3 className="mt-4 font-display text-base font-extrabold uppercase tracking-wide text-white">
                 {type.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
-                {type.description}
-              </p>
-            </div>
+              <p className="mt-3 text-sm leading-relaxed text-white/50">{type.description}</p>
+            </article>
           ))}
         </div>
       </Container>

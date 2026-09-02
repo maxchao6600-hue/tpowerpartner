@@ -1,58 +1,52 @@
-import { Container, SectionHeading, SectionLabel } from "@/components/ui/Container";
+import { Container, SectionLabel } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
-const commissionAreas = [
-  {
-    title: "Commission Model",
-    description:
-      "Performance-based commission structures tailored to partnership type. Specific rates are provided upon approval.",
-  },
-  {
-    title: "Qualification",
-    description:
-      "Clear criteria define which actions and conversions qualify for commission under your partner agreement.",
-  },
-  {
-    title: "Payouts",
-    description:
-      "Structured payout schedules with transparent reporting. View pending and completed commissions in your dashboard.",
-  },
-  {
-    title: "Tracking",
-    description:
-      "Real-time tracking links and attribution ensure accurate performance measurement across all campaigns.",
-  },
+const tiers = [
+  { label: "Partner Level", desc: "Partnership tiering and program structure defined in your official agreement." },
+  { label: "Commission", desc: "Performance-based commission framework communicated upon partner approval." },
+  { label: "Performance", desc: "Qualifying actions and performance criteria documented for approved partners." },
+  { label: "Reward", desc: "Payout schedules and reward mechanics outlined in your partner agreement." },
 ];
 
 export function CommissionSection() {
   return (
-    <section className="border-y border-border bg-muted-bg py-20 lg:py-28">
-      <Container>
-        <div className="grid gap-16 lg:grid-cols-[1fr_1.5fr]">
+    <section className="casino-bg-dark relative overflow-hidden py-20 lg:py-28">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(227,24,55,0.14)_0%,transparent_55%)]" aria-hidden="true" />
+      <Container className="relative">
+        <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <SectionLabel>Commission</SectionLabel>
-            <SectionHeading as="h2">
-              A partnership built around performance.
-            </SectionHeading>
-            <p className="mt-6 text-sm leading-relaxed text-muted md:text-base">
-              TPOWER Partner operates on a performance-based model. Commission
-              terms, qualifying actions, and payout schedules are defined in your
-              partner agreement and communicated clearly upon approval.
+            <SectionLabel className="!text-accent-bright">Commission</SectionLabel>
+            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] font-extrabold uppercase leading-[1.05] tracking-[-0.03em] text-white">
+              The More You Grow,
+              <br />
+              <span className="text-accent-bright">The More You Can Earn.</span>
+            </h2>
+            <p className="mt-5 text-sm text-white/55 md:text-base">
+              Commission details are provided upon partner approval. No figures, percentages, or
+              earning guarantees are published until your official agreement is confirmed.
             </p>
-            <div className="mt-8">
-              <Button href="/commission">View commission details</Button>
-            </div>
+            <Button href="/commission" className="mt-8">
+              View Commission
+            </Button>
           </div>
 
-          <div className="divide-y divide-border border border-border bg-warm-white">
-            {commissionAreas.map((area) => (
-              <div key={area.title} className="p-6 lg:p-8">
-                <h3 className="font-mono text-xs tracking-[0.15em] text-accent uppercase">
-                  {area.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {area.description}
-                </p>
+          <div className="space-y-3">
+            {tiers.map((tier, i) => (
+              <div
+                key={tier.label}
+                className="group border border-white/10 bg-charcoal-mid/80 p-6 transition-all hover:border-accent/50 hover:red-glow lg:p-7"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="font-display text-3xl font-extrabold text-accent-bright">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white">
+                      {tier.label}
+                    </h3>
+                    <p className="mt-1 text-xs leading-relaxed text-white/50">{tier.desc}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

@@ -1,25 +1,22 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
-
-const routes = [
-  "",
-  "/why-tpower",
-  "/how-it-works",
-  "/commission",
-  "/resources",
-  "/faq",
-  "/contact",
-  "/register",
-  "/terms",
-  "/privacy",
-  "/responsible-gaming",
-];
+import { locales } from "@/lib/i18n/config";
+import { pageSlugs, localizedPath } from "@/lib/i18n/paths";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
-    url: `${siteConfig.url}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.8,
-  }));
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const locale of locales) {
+    for (const slug of pageSlugs) {
+      if (slug === "login" || slug === "register") continue;
+      entries.push({
+        url: `${siteConfig.url}${localizedPath(locale, slug)}`,
+        lastModified: new Date(),
+        changeFrequency: slug === "" ? "weekly" : "monthly",
+        priority: slug === "" ? 1 : 0.8,
+      });
+    }
+  }
+
+  return entries;
 }

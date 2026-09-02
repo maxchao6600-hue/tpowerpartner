@@ -1,33 +1,33 @@
 export const siteConfig = {
   name: "TPOWER Partner",
   shortName: "TPOWER Partner",
+  tagline: "Official TPOWER Partner Program",
   description:
-    "TPOWER Partner is a professional affiliate and partnership program built for marketers, publishers, and traffic owners who want to grow through performance-based partnerships.",
+    "TPOWER Partner is the official partner and affiliate platform for TPOWER Casino. Register, login, and join the TPOWER partner program.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://tpowerpartner.com",
-  locale: "en",
+  locale: "en" as const,
   contactEmail: "partners@tpowerpartner.com",
 } as const;
 
 export const navLinks = [
-  { label: "Why TPOWER", href: "/why-tpower" },
+  { label: "Partner Program", href: "/about" },
+  { label: "Benefits", href: "/#benefits" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Commission", href: "/commission" },
-  { label: "Resources", href: "/resources" },
   { label: "FAQ", href: "/faq" },
 ] as const;
 
 export const footerNav = {
   program: [
-    { label: "Why TPOWER", href: "/why-tpower" },
-    { label: "How It Works", href: "/how-it-works" },
+    { label: "Partner Program", href: "/about" },
     { label: "Commission", href: "/commission" },
-    { label: "Resources", href: "/resources" },
+    { label: "How It Works", href: "/how-it-works" },
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
   ],
-  partner: [
+  account: [
+    { label: "Register", href: "/register" },
     { label: "Login", href: "/login" },
-    { label: "Become a Partner", href: "/register" },
   ],
   legal: [
     { label: "Terms & Conditions", href: "/terms" },
@@ -37,34 +37,9 @@ export const footerNav = {
 } as const;
 
 export const resourceCategories = [
-  {
-    title: "Affiliate Guides",
-    description: "Foundational guidance for building and scaling partner campaigns.",
-    href: "/resources#affiliate-guides",
-  },
-  {
-    title: "Marketing Resources",
-    description: "Creative assets, campaign frameworks, and promotional best practices.",
-    href: "/resources#marketing-resources",
-  },
-  {
-    title: "Partner Tips",
-    description: "Practical insights for optimizing traffic and partnership performance.",
-    href: "/resources#partner-tips",
-  },
-  {
-    title: "Industry Insights",
-    description: "Trends and perspectives for performance marketing professionals.",
-    href: "/resources#industry-insights",
-  },
-  {
-    title: "Campaign Resources",
-    description: "Tools and references to support structured campaign execution.",
-    href: "/resources#campaign-resources",
-  },
-  {
-    title: "FAQ",
-    description: "Answers to common questions about the TPOWER Partner program.",
-    href: "/faq",
-  },
+  { title: "Partner Guides", description: "Guidance for the TPOWER Partner Program.", href: "/resources#partner-guides" },
+  { title: "Marketing Resources", description: "Brand assets for approved partner campaigns.", href: "/resources#marketing-resources" },
+  { title: "Promotion Materials", description: "Creative materials for TPOWER partners.", href: "/resources#promotion-materials" },
+  { title: "Program Updates", description: "Updates from the TPOWER Partner Program.", href: "/resources#program-updates" },
+  { title: "FAQ", description: "Common partner program questions.", href: "/faq" },
 ] as const;

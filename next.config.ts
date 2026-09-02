@@ -1,7 +1,24 @@
 import type { NextConfig } from "next";
+import { contentSlugs } from "./src/lib/i18n/paths";
+
+const legacyPaths = [
+  "",
+  ...contentSlugs.filter((s) => s !== "register" && s !== "login"),
+  "resources",
+];
+
+const redirects = legacyPaths.flatMap((path) => [
+  {
+    source: path === "" ? "/" : `/${path}`,
+    destination: `/en${path === "" ? "" : `/${path}`}`,
+    permanent: true,
+  },
+]);
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return redirects;
+  },
 };
 
 export default nextConfig;

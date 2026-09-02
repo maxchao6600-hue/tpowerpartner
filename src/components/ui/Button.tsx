@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { type ComponentProps } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "inverse" | "outline-light";
 
 type ButtonProps = ComponentProps<"button"> & {
   variant?: ButtonVariant;
@@ -11,15 +11,19 @@ type ButtonProps = ComponentProps<"button"> & {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-accent text-white hover:bg-accent-hover border border-accent",
+    "btn-shimmer bg-accent text-white border border-accent-bright/50 red-glow-strong hover:brightness-110",
   secondary:
-    "bg-transparent text-foreground border border-border hover:border-foreground",
+    "bg-transparent text-white border-2 border-white/30 hover:border-white hover:bg-white/10",
   ghost:
-    "bg-transparent text-foreground hover:text-accent border border-transparent",
+    "bg-transparent text-white/80 border border-transparent hover:text-accent-bright hover:border-accent/30",
+  inverse:
+    "bg-white text-accent border border-white hover:bg-white/90 red-glow",
+  "outline-light":
+    "bg-transparent text-foreground border-2 border-charcoal/20 hover:border-accent hover:text-accent",
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 px-6 py-3 text-xs font-medium tracking-[0.12em] uppercase transition-colors duration-200";
+  "inline-flex h-12 items-center justify-center gap-2 rounded-lg px-8 text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300";
 
 export function Button({
   variant = "primary",
@@ -39,16 +43,8 @@ export function Button({
         </a>
       );
     }
-    return (
-      <Link href={href} className={classes}>
-        {children}
-      </Link>
-    );
+    return <Link href={href} className={classes}>{children}</Link>;
   }
 
-  return (
-    <button className={classes} {...props}>
-      {children}
-    </button>
-  );
+  return <button className={classes} {...props}>{children}</button>;
 }

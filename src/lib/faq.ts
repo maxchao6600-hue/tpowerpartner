@@ -2,46 +2,46 @@ export const faqItems = [
   {
     question: "What is TPOWER Partner?",
     answer:
-      "TPOWER Partner is the official affiliate and partnership program for TPOWER. It is designed for professional marketers, publishers, and traffic owners who want to build long-term, performance-based partnerships.",
+      "TPOWER Partner is the official partner and affiliate platform for TPOWER Casino. It provides program information, partner registration, and account access for individuals and businesses who want to work with TPOWER through a performance-based partnership program.",
   },
   {
-    question: "Who can become a partner?",
+    question: "Who can register as a TPOWER Partner?",
     answer:
-      "Affiliate marketers, content creators, media buyers, website owners, social community operators, and other traffic partners with a legitimate marketing presence may apply. All applications are reviewed individually.",
+      "Affiliate partners, website owners, content creators, social media partners, traffic partners, and agents with a legitimate marketing presence may register. All applications are reviewed individually based on program guidelines.",
   },
   {
-    question: "How does the program work?",
+    question: "How do I register?",
     answer:
-      "Partners apply to the program, receive approval based on fit and compliance, then promote TPOWER using assigned tracking links. Performance is monitored through the partner dashboard, and commissions are calculated based on agreed terms.",
+      "Click Register on this website to submit your partner application. Provide details about your traffic sources and marketing approach. Our team will review your application and contact you with next steps.",
   },
   {
-    question: "How is performance tracked?",
+    question: "How do existing partners log in?",
     answer:
-      "Each partner receives unique tracking links and access to a reporting dashboard. Traffic, conversions, and commission data are recorded in real time, giving you clear visibility into campaign performance.",
+      "Approved partners can access their account through the Login page. Use the credentials provided during your partner onboarding to sign in to your partner dashboard.",
   },
   {
-    question: "How are commissions calculated?",
+    question: "How does the partnership program work?",
     answer:
-      "Commission structures are defined in your partner agreement and may vary based on partnership type and performance tier. Specific rates and qualifying actions are provided upon approval.",
+      "Partners register, complete the onboarding process, and upon approval receive access to partner tools and promotional materials. You promote TPOWER through approved channels, and performance is tracked through the partner platform.",
   },
   {
-    question: "When are commissions paid?",
+    question: "How is partner performance tracked?",
     answer:
-      "Payout schedules and minimum thresholds are outlined in your partner agreement. Partners can view pending and completed payouts through the partner dashboard.",
+      "Approved partners receive unique tracking links and access to a reporting dashboard. Traffic, player activity, and commission data are recorded to provide visibility into campaign performance.",
   },
   {
-    question: "What promotional methods are allowed?",
+    question: "How does the commission structure work?",
     answer:
-      "Approved promotional methods depend on your partnership agreement and must comply with program guidelines. Restricted practices, misleading claims, and non-compliant traffic sources are not permitted.",
+      "Commission terms are defined in your partner agreement and may vary based on partnership type. Specific rates and qualifying actions are communicated upon approval — no commission figures are published until your agreement is confirmed.",
   },
   {
-    question: "Who provides partner support?",
+    question: "Where can I get promotional materials?",
     answer:
-      "Dedicated partner support is available to assist with account setup, tracking, reporting, and program-related questions. Contact partner support through the contact page or your partner dashboard.",
+      "Approved partners can access promotional materials and marketing resources through the partner dashboard. Additional resources will also be made available in the Resources section as they are published.",
   },
   {
-    question: "How do I get started?",
+    question: "How can I contact TPOWER Partner support?",
     answer:
-      "Click Become a Partner to submit your application. Once reviewed and approved, you will receive access to your partner dashboard, tracking links, and promotional resources.",
+      "Contact partner support through the Contact page or by emailing partners@tpowerpartner.com. Existing partners may also reach support through their partner dashboard.",
   },
 ] as const;

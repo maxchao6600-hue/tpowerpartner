@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf8;
-  --foreground: #0d0d0d;
-  --muted: #6b6b6b;
-  --muted-bg: #f0efec;
-  --border: #e2e1dd;
-  --graphite: #111111;
-  --graphite-soft: #1a1a1a;
-  --accent: #c41e3a;
-  --accent-hover: #a81832;
-  --accent-muted: rgba(196, 30, 58, 0.08);
-  --warm-white: #fafaf8;
-  --surface-dark: #0d0d0d;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #8a8a8a;
+  --muted-bg: #f2f2f2;
+  --border: #2a2a2a;
+  --charcoal: #0a0a0a;
+  --charcoal-soft: #141414;
+  --charcoal-mid: #1a1a1a;
+  --accent: #e31837;
+  --accent-bright: #ff2244;
+  --accent-hover: #c41430;
+  --accent-muted: rgba(227, 24, 55, 0.15);
+  --accent-glow: rgba(227, 24, 55, 0.55);
+  --accent-glow-soft: rgba(227, 24, 55, 0.25);
+  --white: #ffffff;
+  --felt: #0d2818;
 }
 
 @theme inline {
@@ -21,34 +25,32 @@
   --color-muted: var(--muted);
   --color-muted-bg: var(--muted-bg);
   --color-border: var(--border);
-  --color-graphite: var(--graphite);
-  --color-graphite-soft: var(--graphite-soft);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-soft: var(--charcoal-soft);
+  --color-charcoal-mid: var(--charcoal-mid);
   --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
   --color-accent-hover: var(--accent-hover);
   --color-accent-muted: var(--accent-muted);
-  --color-warm-white: var(--warm-white);
-  --color-surface-dark: var(--surface-dark);
+  --color-accent-glow: var(--accent-glow);
+  --color-white: var(--white);
+  --color-felt: var(--felt);
+  --color-graphite: var(--charcoal);
+  --color-graphite-soft: var(--charcoal-soft);
+  --color-warm-white: var(--white);
+  --color-surface-dark: var(--charcoal);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-syne);
+  --font-display: var(--font-inter);
   --font-mono: var(--font-ibm-plex-mono);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -56,82 +58,98 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: var(--charcoal);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
   background: var(--accent-muted);
-  color: var(--foreground);
+  color: var(--white);
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-bright);
   outline-offset: 3px;
 }
 
+/* Casino backgrounds */
+.casino-bg-dark {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(227, 24, 55, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(227, 24, 55, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+}
+
+.casino-bg-red {
+  background:
+    radial-gradient(ellipse 100% 80% at 50% 100%, rgba(0, 0, 0, 0.4) 0%, transparent 60%),
+    linear-gradient(135deg, #c41430 0%, #e31837 40%, #a01028 100%);
+}
+
+.casino-bg-felt {
+  background:
+    radial-gradient(ellipse at center, rgba(227, 24, 55, 0.06) 0%, transparent 70%),
+    linear-gradient(180deg, #0d2818 0%, #0a1f12 100%);
+}
+
+.casino-light-streak {
+  background: linear-gradient(105deg, transparent 40%, rgba(227, 24, 55, 0.12) 50%, transparent 60%);
+}
+
+.red-glow {
+  box-shadow: 0 0 30px var(--accent-glow-soft), 0 0 60px rgba(227, 24, 55, 0.15);
+}
+
+.red-glow-strong {
+  box-shadow: 0 4px 24px var(--accent-glow), 0 0 48px rgba(227, 24, 55, 0.3);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 40px rgba(227, 24, 55, 0.5);
+}
+
 @keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes draw-line {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; filter: blur(20px); }
+  50% { opacity: 1; filter: blur(28px); }
 }
 
-@keyframes pulse-subtle {
-  0%,
-  100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.animate-fade-up {
-  animation: fade-up 0.7s ease-out both;
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
-.animate-draw-line {
-  stroke-dasharray: 1000;
-  animation: draw-line 2s ease-out forwards;
+@keyframes hero-light-drift {
+  0%, 100% { transform: scale(1.02) translateX(0); }
+  50% { transform: scale(1.03) translateX(-0.4%); }
 }
 
-.animate-pulse-subtle {
-  animation: pulse-subtle 3s ease-in-out infinite;
+.hero-artwork-panel img {
+  animation: hero-light-drift 18s ease-in-out infinite;
 }
 
+.animate-fade-up { animation: fade-up 0.7s ease-out both; }
+.animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 90s linear infinite; }
 .stagger-1 { animation-delay: 0.1s; }
 .stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
 
-.grid-bg {
-  background-image:
-    linear-gradient(to right, var(--border) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-  background-size: 64px 64px;
+.btn-shimmer {
+  background-size: 200% auto;
+  background-image: linear-gradient(90deg, #e31837 0%, #ff4466 50%, #e31837 100%);
 }
 
-.grid-bg-dark {
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 64px 64px;
+.btn-shimmer:hover {
+  animation: shimmer 2s linear infinite;
 }
