@@ -27,7 +27,7 @@ export const pageSlugs = [
   "contact",
   "partner-support",
   "news",
-  "insights",
+  "partner-insights",
   "terms",
   "privacy",
   "register",

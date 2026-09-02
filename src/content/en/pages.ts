@@ -173,6 +173,12 @@ export const pages: Record<string, PageContent> = {
         ],
       },
       {
+        type: "flow",
+        heading: "Commission Flow",
+        items: ["Traffic", "Tracked Activity", "Qualified Actions", "Performance Review", "Partner Reporting", "Approved Payout"],
+        disclaimer: "Specific commission rates, CPA figures and revenue share percentages are confirmed according to the applicable partner agreement.",
+      },
+      {
         type: "notice",
         body: "Specific commission rates, CPA figures, and revenue share percentages are not published until your partner agreement is confirmed.",
       },
@@ -745,11 +751,11 @@ export const pages: Record<string, PageContent> = {
     ],
   ),
 
-  insights: p(
-    "insights",
+  "partner-insights": p(
+    "partner-insights",
     {
       title: "Partner Insights",
-      description: "Affiliate strategy, partner tips, and casino marketing education.",
+      description: "Affiliate strategy, partner tips, and casino marketing education for TPOWER partners.",
     },
     {
       label: "Partner Insights",
@@ -760,17 +766,29 @@ export const pages: Record<string, PageContent> = {
     },
     [
       {
-        type: "grid",
+        type: "articles",
+        heading: "Evergreen Partner Guides",
         items: [
-          { title: "Affiliate Strategy", body: "Frameworks for building sustainable partner campaigns." },
-          { title: "Partner Tips", body: "Practical guidance for optimizing your TPOWER partnership." },
-          { title: "Casino Marketing", body: "Industry insights for promoting online casino brands responsibly." },
-          { title: "Campaign Education", body: "Best practices for creative, tracking, and conversion." },
+          { tag: "Strategy", title: "How To Structure A Casino Affiliate Campaign", body: "Framework for planning traffic sources, creative assets, and conversion tracking before launching a TPOWER partner campaign." },
+          { tag: "Content", title: "Partner Content Planning", body: "Guidance on creating review content, comparison pages, and educational material that aligns with program guidelines." },
+          { tag: "Tracking", title: "Tracking Basics For Partners", body: "Overview of link setup, attribution concepts, and reporting visibility available through the partner platform." },
+          { tag: "Compliance", title: "Responsible Promotion", body: "Best practices for promoting online casino brands ethically and in accordance with program requirements." },
+          { tag: "Creative", title: "Creative Best Practices", body: "Tips for using brand assets, campaign visuals, and promotional copy effectively across channels." },
+          { tag: "Optimization", title: "Partner Funnel Optimization", body: "Approaches to improving landing page performance, click-through rates, and campaign efficiency over time." },
         ],
       },
       {
         type: "notice",
-        body: "In-depth articles will be added to this hub over time. Register as a partner to stay informed about new content.",
+        body: "These are educational guides for partners — not company announcements. Register as a partner to access full program resources.",
+      },
+      {
+        type: "related",
+        heading: "Related Pages",
+        links: [
+          { label: "Marketing Resources", slug: "marketing-resources" },
+          { label: "Partner Tools", slug: "partner-tools" },
+          { label: "Affiliate Guidelines", slug: "affiliate-guidelines" },
+        ],
       },
     ],
   ),

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { locales, type Locale, ogLocale } from "@/lib/i18n/config";
 import { localizedPath, type PageSlug } from "@/lib/i18n/paths";
 import { siteConfig } from "@/lib/site";
+import { brandAssets } from "@/lib/assets";
 
 type PageMeta = {
   title: string;
@@ -27,6 +28,8 @@ export function createPageMetadata({
         : `${siteConfig.name} | Official TPOWER Casino Partner Program`
       : `${title} | ${siteConfig.name}`;
 
+  const ogImage = `${siteConfig.url}${brandAssets.partnerHero}`;
+
   const languages: Record<string, string> = {
     "x-default": `${siteConfig.url}${localizedPath("en", slug)}`,
   };
@@ -49,11 +52,13 @@ export function createPageMetadata({
       siteName: siteConfig.name,
       locale: ogLocale[locale],
       type: "website",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: siteConfig.name }],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
+      images: [ogImage],
     },
     robots: noIndex
       ? { index: false, follow: false }

@@ -173,6 +173,12 @@ export const pages: Record<string, PageContent> = {
         ],
       },
       {
+        type: "flow",
+        heading: "佣金流程",
+        items: ["流量", "追踪活动", "合格行为", "绩效审核", "合作伙伴报表", "获批结算"],
+        disclaimer: "具体佣金比例、CPA 金额及 revenue share 百分比均依据适用的合作伙伴协议确认。",
+      },
+      {
         type: "notice",
         body: "具体佣金比例、CPA 金额及收入分成百分比，在合作伙伴协议确认前不会对外公布。",
       },
@@ -745,11 +751,11 @@ export const pages: Record<string, PageContent> = {
     ],
   ),
 
-  insights: p(
-    "insights",
+  "partner-insights": p(
+    "partner-insights",
     {
       title: "合作伙伴洞察",
-      description: "联盟推广策略、合作伙伴技巧与赌场营销知识。",
+      description: "面向 TPOWER 合作伙伴的联盟推广策略、实用技巧与赌场营销知识。",
     },
     {
       label: "合作伙伴洞察",
@@ -760,17 +766,29 @@ export const pages: Record<string, PageContent> = {
     },
     [
       {
-        type: "grid",
+        type: "articles",
+        heading: "常青合作伙伴指南",
         items: [
-          { title: "联盟推广策略", body: "构建可持续合作伙伴推广活动的框架思路。" },
-          { title: "合作伙伴技巧", body: "优化 TPOWER 合作关系的实用建议。" },
-          { title: "赌场营销", body: "负责任推广在线赌场品牌的行业洞察。" },
-          { title: "推广活动知识", body: "创意、追踪与转化的最佳实践。" },
+          { tag: "策略", title: "如何搭建赌场联盟推广活动", body: "在启动 TPOWER 合作伙伴推广前，规划流量来源、创意素材与转化追踪的框架思路。" },
+          { tag: "内容", title: "合作伙伴内容规划", body: "如何制作符合计划指南的评测内容、对比页面与教育性素材。" },
+          { tag: "追踪", title: "合作伙伴追踪基础", body: "链接配置、归因概念及合作伙伴平台报表功能的概览。" },
+          { tag: "合规", title: "负责任推广", body: "以符合计划要求的方式，道德地推广在线赌场品牌的最佳实践。" },
+          { tag: "创意", title: "创意最佳实践", body: "如何在各渠道有效使用品牌资产、推广视觉与推广文案。" },
+          { tag: "优化", title: "合作伙伴漏斗优化", body: "提升落地页表现、点击率与推广活动效率的方法。" },
         ],
       },
       {
         type: "notice",
-        body: "深度文章将陆续加入本栏目。注册成为合作伙伴，以便及时了解新内容发布。",
+        body: "以上为面向合作伙伴的教育指南，并非公司公告。注册成为合作伙伴以获取完整计划资源。",
+      },
+      {
+        type: "related",
+        heading: "相关页面",
+        links: [
+          { label: "营销资源", slug: "marketing-resources" },
+          { label: "合作伙伴工具", slug: "partner-tools" },
+          { label: "联盟推广指南", slug: "affiliate-guidelines" },
+        ],
       },
     ],
   ),

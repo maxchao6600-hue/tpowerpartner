@@ -7,9 +7,12 @@ export type PageSection =
   | { type: "cards"; heading?: string; items: { tag?: string; title: string; body: string }[] }
   | { type: "grid"; heading?: string; items: { title: string; body: string; href?: string }[] }
   | { type: "steps"; heading?: string; items: { title: string; body: string }[] }
+  | { type: "flow"; heading?: string; items: string[]; disclaimer?: string }
   | { type: "list"; heading?: string; items: string[] }
   | { type: "legal"; sections: { title: string; paragraphs: string[] }[] }
-  | { type: "notice"; body: string };
+  | { type: "notice"; body: string }
+  | { type: "articles"; heading?: string; items: { title: string; body: string; tag?: string }[] }
+  | { type: "related"; heading?: string; links: { label: string; slug: string }[] };
 
 export type PageContent = {
   slug: string;
@@ -46,15 +49,16 @@ export type UiDictionary = {
     contactSupport: string;
     alreadyPartner: string;
     noAccount: string;
+    becomePartner: string;
+    exploreProgram: string;
+    viewResources: string;
+    forgotPassword: string;
   };
   nav: {
     program: string;
-    whyTpower: string;
-    howItWorks: string;
-    commission: string;
+    partners: string;
     resources: string;
-    faq: string;
-    benefits: string;
+    support: string;
   };
   mega: {
     program: string;
@@ -65,6 +69,7 @@ export type UiDictionary = {
     whyTpower: string;
     benefits: string;
     commission: string;
+    about: string;
     partnerTypes: string;
     affiliateProgram: string;
     agentProgram: string;
@@ -82,12 +87,25 @@ export type UiDictionary = {
   };
   footer: {
     program: string;
-    account: string;
+    partners: string;
+    resources: string;
+    support: string;
     legal: string;
     partnerProgram: string;
+    whyTpower: string;
+    benefits: string;
     commission: string;
+    partnerTypes: string;
+    affiliateProgram: string;
+    agentProgram: string;
     howItWorks: string;
+    marketingResources: string;
+    promotionalMaterials: string;
+    partnerTools: string;
+    insights: string;
+    news: string;
     faq: string;
+    partnerSupport: string;
     contact: string;
     register: string;
     login: string;
@@ -95,9 +113,8 @@ export type UiDictionary = {
     privacy: string;
     responsibleGaming: string;
     compliance: string;
-    guidelines: string;
-    resources: string;
-    support: string;
+    affiliateGuidelines: string;
+    contentGuidelines: string;
   };
   forms: {
     firstName: string;
@@ -111,6 +128,8 @@ export type UiDictionary = {
     social: string;
     traffic: string;
     agent: string;
+    websiteSource: string;
+    country: string;
     message: string;
     password: string;
     submitRegister: string;
@@ -126,6 +145,10 @@ export type UiDictionary = {
     contactSubtitle: string;
     contactSent: string;
     contactThanks: string;
+    portalLabel: string;
+    officialPlatform: string;
+    loading: string;
+    errorRequired: string;
   };
   home: HomeContent;
 };
