@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { locales, type Locale, ogLocale } from "@/lib/i18n/config";
 import { localizedPath, type PageSlug } from "@/lib/i18n/paths";
 import { siteConfig } from "@/lib/site";
-import { brandAssets, siteIcons } from "@/lib/assets";
+import { brandAssets } from "@/lib/assets";
 
 type PageMeta = {
   title: string;
@@ -42,11 +42,8 @@ export function createPageMetadata({
     description,
     applicationName: siteConfig.name,
     metadataBase: new URL(siteConfig.url),
-    icons: {
-      icon: [...siteIcons.icon],
-      apple: [...siteIcons.apple],
-      shortcut: [...siteIcons.shortcut],
-    },
+    // Favicon/site icons: App Router file convention (src/app/favicon.ico, icon.png, apple-icon.png)
+    // generated from the Header Logo at public/brand/tpower-logo.png — do not dual-declare here.
     manifest: brandAssets.webManifest,
     alternates: {
       canonical: url,
