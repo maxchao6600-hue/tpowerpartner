@@ -1,7 +1,7 @@
 {
-  "name": "TPOWER Partner",
-  "short_name": "TPOWER Partner",
-  "description": "Official TPOWER Casino Partner Program",
+  "name": "TPOWER",
+  "short_name": "TPOWER",
+  "description": "Official TPOWER Partner Website — online casino access, register and login",
   "start_url": "/en",
   "display": "standalone",
   "background_color": "#0a0a0a",

@@ -29,7 +29,6 @@ export function RegisterForm() {
     if (!form.get("firstName")) next.firstName = f.errorRequired;
     if (!form.get("lastName")) next.lastName = f.errorRequired;
     if (!form.get("email")) next.email = f.errorRequired;
-    if (!form.get("partnerType")) next.partnerType = f.errorRequired;
     setErrors(next);
     return Object.keys(next).length === 0;
   }
@@ -91,14 +90,28 @@ export function RegisterForm() {
                   <label htmlFor="first-name" className="mb-2 block font-mono text-[10px] tracking-[0.15em] text-white/40 uppercase">
                     {f.firstName}
                   </label>
-                  <input id="first-name" name="firstName" type="text" autoComplete="given-name" className={inputClass("firstName")} aria-invalid={!!errors.firstName} aria-describedby={errors.firstName ? "first-name-error" : undefined} />
-                  {errors.firstName && <p id="first-name-error" className="mt-1 text-xs text-red-400">{errors.firstName}</p>}
+                  <input
+                    id="first-name"
+                    name="firstName"
+                    type="text"
+                    autoComplete="given-name"
+                    className={inputClass("firstName")}
+                    aria-invalid={!!errors.firstName}
+                  />
+                  {errors.firstName && <p className="mt-1 text-xs text-red-400">{errors.firstName}</p>}
                 </div>
                 <div>
                   <label htmlFor="last-name" className="mb-2 block font-mono text-[10px] tracking-[0.15em] text-white/40 uppercase">
                     {f.lastName}
                   </label>
-                  <input id="last-name" name="lastName" type="text" autoComplete="family-name" className={inputClass("lastName")} aria-invalid={!!errors.lastName} />
+                  <input
+                    id="last-name"
+                    name="lastName"
+                    type="text"
+                    autoComplete="family-name"
+                    className={inputClass("lastName")}
+                    aria-invalid={!!errors.lastName}
+                  />
                   {errors.lastName && <p className="mt-1 text-xs text-red-400">{errors.lastName}</p>}
                 </div>
               </div>
@@ -106,30 +119,22 @@ export function RegisterForm() {
                 <label htmlFor="reg-email" className="mb-2 block font-mono text-[10px] tracking-[0.15em] text-white/40 uppercase">
                   {f.email}
                 </label>
-                <input id="reg-email" name="email" type="email" autoComplete="email" className={inputClass("email")} aria-invalid={!!errors.email} />
+                <input
+                  id="reg-email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  className={inputClass("email")}
+                  aria-invalid={!!errors.email}
+                />
                 {errors.email && <p className="mt-1 text-xs text-red-400">{errors.email}</p>}
-              </div>
-              <div>
-                <label htmlFor="partner-type" className="mb-2 block font-mono text-[10px] tracking-[0.15em] text-white/40 uppercase">
-                  {f.partnerType}
-                </label>
-                <select id="partner-type" name="partnerType" className={inputClass("partnerType")} aria-invalid={!!errors.partnerType} defaultValue="">
-                  <option value="" className="bg-charcoal">{f.selectType}</option>
-                  <option value="affiliate" className="bg-charcoal">{f.affiliate}</option>
-                  <option value="website" className="bg-charcoal">{f.website}</option>
-                  <option value="content" className="bg-charcoal">{f.content}</option>
-                  <option value="social" className="bg-charcoal">{f.social}</option>
-                  <option value="traffic" className="bg-charcoal">{f.traffic}</option>
-                  <option value="agent" className="bg-charcoal">{f.agent}</option>
-                </select>
-                {errors.partnerType && <p className="mt-1 text-xs text-red-400">{errors.partnerType}</p>}
               </div>
               <Button type="submit" className="w-full" disabled={loading} aria-busy={loading}>
                 {loading ? f.loading : f.submitRegister}
               </Button>
               <p className="text-center text-xs text-white/45">
                 <Link href={localizedPath(locale, "login")} className="text-accent-bright hover:underline">
-                  {dict.ui.cta.alreadyPartner}
+                  {dict.ui.cta.alreadyAccount}
                 </Link>
               </p>
               <p className="text-center font-mono text-[9px] tracking-[0.15em] text-white/30 uppercase">{f.officialPlatform}</p>

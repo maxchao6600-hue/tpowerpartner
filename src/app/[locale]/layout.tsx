@@ -62,7 +62,7 @@ function JsonLd({ locale }: { locale: Locale }) {
     description: dict.ui.site.description,
     contactPoint: {
       "@type": "ContactPoint",
-      contactType: "partner support",
+      contactType: "customer support",
       email: siteConfig.contactEmail,
     },
   };

@@ -41,7 +41,7 @@ export function Logo({
           </span>
           {showPartnerLabel && (
             <span className={`mt-1 hidden font-mono text-[9px] tracking-[0.28em] uppercase sm:block sm:text-[10px] ${subtitleClass}`}>
-              {locale === "zh" ? "合作伙伴计划" : "Partner Program"}
+              {locale === "zh" ? "官方合作伙伴" : "Official Partner"}
             </span>
           )}
         </span>

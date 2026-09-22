@@ -11,28 +11,213 @@ function p(
 }
 
 export const pages: Record<string, PageContent> = {
-  about: p(
-    "about",
+  games: p(
+    "games",
     {
-      title: "About TPOWER Partner",
-      description:
-        "Learn what TPOWER Partner is, how it relates to TPOWER Casino, and who the official partner program is designed for.",
+      title: "TPOWER Games",
+      description: "Explore TPOWER online casino game categories including slots, live casino and table games.",
     },
     {
-      label: "About",
-      title: "About ",
-      titleHighlight: "TPOWER Partner",
-      description:
-        "The official partner-facing platform for TPOWER Casino — built for affiliates, agents, and growth partners.",
+      label: "Games",
+      title: "Explore ",
+      titleHighlight: "TPOWER Games",
+      description: "Online casino game categories available through TPOWER.",
+      variant: "dark",
+    },
+    [
+      {
+        type: "prose",
+        paragraphs: [
+          "TPOWER offers online casino and online gaming entertainment. Through this official partner website, you can learn about available game categories before registering or logging in.",
+          "Exact game lists and providers are confirmed inside your TPOWER account after login and may vary by market.",
+        ],
+      },
+      {
+        type: "grid",
+        heading: "Game Categories",
+        items: [
+          { title: "Slots", body: "Online slot games designed for entertainment-focused play." },
+          { title: "Live Casino", body: "Live dealer casino experiences where available on the TPOWER platform." },
+          { title: "Table Games", body: "Classic casino table game options offered through TPOWER." },
+          { title: "Popular Games", body: "Featured titles highlighted for easier discovery after account access." },
+        ],
+      },
+      {
+        type: "notice",
+        body: "Ready to play? Register your TPOWER account or log in through this official partner website.",
+      },
+      {
+        type: "related",
+        heading: "Next Steps",
+        links: [
+          { label: "Register Now", slug: "register" },
+          { label: "Login", slug: "login" },
+          { label: "Promotions", slug: "promotions" },
+          { label: "FAQ", slug: "faq" },
+        ],
+      },
+    ],
+  ),
+
+  promotions: p(
+    "promotions",
+    {
+      title: "TPOWER Promotions",
+      description: "Learn how TPOWER promotions work through this official partner website. Offer details are confirmed in your account.",
+    },
+    {
+      label: "Promotions",
+      title: "TPOWER ",
+      titleHighlight: "Promotions",
+      description: "Promotion information for TPOWER online casino players.",
+      variant: "red",
+    },
+    [
+      {
+        type: "prose",
+        paragraphs: [
+          "TPOWER may offer account promotions and seasonal campaigns through official channels.",
+          "This website does not invent bonus amounts, percentages or guaranteed rewards. Eligible offers are confirmed after registration and login.",
+        ],
+      },
+      {
+        type: "cards",
+        heading: "What To Expect",
+        items: [
+          { tag: "01", title: "Account Offers", body: "Eligible offers appear after you create and access your TPOWER account." },
+          { tag: "02", title: "Seasonal Campaigns", body: "Limited-time campaigns may run inside the TPOWER platform when active." },
+          { tag: "03", title: "Terms Apply", body: "Promotion terms and eligibility are confirmed through official account channels." },
+        ],
+      },
+      {
+        type: "related",
+        heading: "Next Steps",
+        links: [
+          { label: "Create your TPOWER account", slug: "register" },
+          { label: "Login", slug: "login" },
+          { label: "Games", slug: "games" },
+          { label: "Support", slug: "support" },
+        ],
+      },
+    ],
+  ),
+
+  payment: p(
+    "payment",
+    {
+      title: "Payment Methods",
+      description: "General information about TPOWER payment options. Exact methods depend on your market and account status.",
+    },
+    {
+      label: "Payment",
+      title: "Payment ",
+      titleHighlight: "Methods",
+      description: "Convenient deposit and withdrawal options for eligible TPOWER accounts.",
+      variant: "felt",
+    },
+    [
+      {
+        type: "prose",
+        paragraphs: [
+          "TPOWER provides convenient payment options for eligible accounts. Available methods depend on your market, verification status and account settings.",
+          "We do not list unverified payment providers or invent processing guarantees on this website. Exact options are shown after login.",
+        ],
+      },
+      {
+        type: "grid",
+        items: [
+          { title: "Secure Channels", body: "Payment activity is handled through official TPOWER account channels." },
+          { title: "Account Visibility", body: "See supported methods inside your account after you register and log in." },
+          { title: "Support Help", body: "Contact support if you need guidance related to account payment access." },
+        ],
+      },
+      {
+        type: "related",
+        heading: "Next Steps",
+        links: [
+          { label: "Register Now", slug: "register" },
+          { label: "Login", slug: "login" },
+          { label: "FAQ", slug: "faq" },
+          { label: "Support", slug: "support" },
+        ],
+      },
+    ],
+  ),
+
+  support: p(
+    "support",
+    {
+      title: "Customer Support",
+      description: "Get help with TPOWER registration, login, games, payments and account questions through this official partner website.",
+    },
+    {
+      label: "Support",
+      title: "Customer ",
+      titleHighlight: "Support",
+      description: "Assistance for TPOWER online casino users.",
       variant: "cta",
     },
     [
       {
         type: "prose",
         paragraphs: [
-          "TPOWER Partner is the official platform for individuals and businesses who want to work with TPOWER Casino through a structured partner program.",
-          "This website provides program information, partner registration, account access, and resources for approved partners. It is separate from the player-facing TPOWER Casino website.",
-          "The program is designed for affiliate marketers, website owners, content creators, social media partners, traffic partners, and agents with a legitimate promotional presence.",
+          "Need help accessing TPOWER? Use this official partner website to find registration, login and support pathways.",
+          "For partner-program or account questions, contact us through the Contact page or email partners@tpowerpartner.com.",
+        ],
+      },
+      {
+        type: "grid",
+        items: [
+          { title: "Registration Help", body: "Guidance for creating your TPOWER account." },
+          { title: "Login Help", body: "Assistance with signing in to an existing account." },
+          { title: "Account Questions", body: "General questions about games, promotions and payments." },
+        ],
+      },
+      {
+        type: "related",
+        heading: "Helpful Links",
+        links: [
+          { label: "FAQ", slug: "faq" },
+          { label: "Contact", slug: "contact" },
+          { label: "Register", slug: "register" },
+          { label: "Login", slug: "login" },
+        ],
+      },
+    ],
+  ),
+
+  about: p(
+    "about",
+    {
+      title: "About TPOWER",
+      description:
+        "Learn about TPOWER online casino and this official partner website for registration, login and account access.",
+    },
+    {
+      label: "About",
+      title: "About ",
+      titleHighlight: "TPOWER",
+      description:
+        "Official partner website for TPOWER online casino access.",
+      variant: "cta",
+    },
+    [
+      {
+        type: "prose",
+        paragraphs: [
+          "TPOWER is an online casino and online gaming platform. This website is an official TPOWER partner website designed to help users register, log in and find useful information about games, promotions, payments and support.",
+          "The primary goal of this site is clear casino access — not affiliate recruitment or business-opportunity marketing.",
+          "Use Register Now for new accounts and Login if you already have a TPOWER account.",
+        ],
+      },
+      {
+        type: "related",
+        heading: "Explore",
+        links: [
+          { label: "Games", slug: "games" },
+          { label: "Promotions", slug: "promotions" },
+          { label: "Why TPOWER", slug: "why-tpower" },
+          { label: "Register", slug: "register" },
         ],
       },
     ],
@@ -43,40 +228,50 @@ export const pages: Record<string, PageContent> = {
     {
       title: "Why TPOWER",
       description:
-        "Discover why partners choose TPOWER — brand strength, casino ecosystem, support, and growth opportunity.",
+        "Discover why players choose TPOWER online casino — games, account access, support, payments and responsible entertainment.",
     },
     {
       label: "Why TPOWER",
-      title: "Why Partner With ",
+      title: "Why Choose ",
       titleHighlight: "TPOWER",
-      description: "A premium online casino brand with a dedicated partner program built for performance.",
+      description: "Clear reasons to access TPOWER through this official partner website.",
       variant: "red",
     },
     [
       {
         type: "cards",
-        heading: "The TPOWER Advantage",
+        heading: "The TPOWER Experience",
         items: [
           {
             tag: "01",
-            title: "Established Casino Brand",
-            body: "TPOWER is a recognized online casino brand. Partners promote a product with premium positioning and a strong visual identity.",
+            title: "Online Casino Selection",
+            body: "Access online casino and gaming categories through TPOWER.",
           },
           {
             tag: "02",
-            title: "Partner-First Platform",
-            body: "TPOWER Partner is built specifically for affiliates and agents — with registration, onboarding, and program information in one place.",
+            title: "Simple Account Access",
+            body: "Register and login pathways are easy to find on this official partner website.",
           },
           {
             tag: "03",
-            title: "Growth Opportunity",
-            body: "Partners who build quality traffic and follow program guidelines can grow their partnership over time through the official program.",
+            title: "Customer Support",
+            body: "Support resources help with registration, login and account questions.",
           },
           {
             tag: "04",
-            title: "Support & Resources",
-            body: "Approved partners receive access to partner tools, promotional materials, and support channels as outlined in their agreement.",
+            title: "Mobile-Friendly Access",
+            body: "Browse TPOWER information comfortably on desktop and mobile devices.",
           },
+        ],
+      },
+      {
+        type: "related",
+        heading: "Next Steps",
+        links: [
+          { label: "Register Now", slug: "register" },
+          { label: "Games", slug: "games" },
+          { label: "Payment", slug: "payment" },
+          { label: "FAQ", slug: "faq" },
         ],
       },
     ],
@@ -708,13 +903,13 @@ export const pages: Record<string, PageContent> = {
     "faq",
     {
       title: "FAQ",
-      description: "Frequently asked questions about the TPOWER Partner Program.",
+      description: "Frequently asked questions about TPOWER online casino access, registration, login, games and support.",
     },
     {
       label: "FAQ",
       title: "Frequently Asked ",
       titleHighlight: "Questions",
-      description: "Answers to common partner program questions.",
+      description: "Answers about TPOWER online casino access through this official partner website.",
       variant: "dark",
     },
     [],
@@ -724,20 +919,20 @@ export const pages: Record<string, PageContent> = {
     "contact",
     {
       title: "Contact",
-      description: "Contact TPOWER Partner support for program and account questions.",
+      description: "Contact TPOWER support for registration, login and account questions.",
     },
     {
       label: "Contact",
       title: "Contact ",
       titleHighlight: "Support",
-      description: "Reach the TPOWER Partner team.",
+      description: "Reach the TPOWER support team.",
       variant: "red",
     },
     [
       {
         type: "prose",
         paragraphs: [
-          "For partner program inquiries, account questions, or promotional support, contact us through the form on this page or email partners@tpowerpartner.com.",
+          "For registration, login or account questions, contact us through the form on this page or email partners@tpowerpartner.com.",
         ],
       },
     ],
@@ -936,13 +1131,13 @@ export const pages: Record<string, PageContent> = {
     "register",
     {
       title: "Register",
-      description: "Register for the TPOWER Partner Program.",
+      description: "Register your TPOWER online casino account through this official partner website.",
     },
     {
       label: "Register",
-      title: "Become A ",
-      titleHighlight: "TPOWER Partner",
-      description: "Join the official TPOWER Partner Program.",
+      title: "Create Your ",
+      titleHighlight: "TPOWER Account",
+      description: "Register through the official TPOWER partner website.",
       variant: "image",
     },
     [],
@@ -953,13 +1148,13 @@ export const pages: Record<string, PageContent> = {
     "login",
     {
       title: "Login",
-      description: "Login to your TPOWER Partner account.",
+      description: "Log in to your TPOWER account through this official partner website.",
     },
     {
       label: "Login",
-      title: "Welcome Back, ",
-      titleHighlight: "Partner",
-      description: "Access your TPOWER Partner dashboard.",
+      title: "Welcome ",
+      titleHighlight: "Back",
+      description: "Sign in to your TPOWER account.",
       variant: "image",
     },
     [],

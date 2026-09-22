@@ -6,61 +6,46 @@ import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { useLocale } from "@/components/providers/LocaleProvider";
-import { localizedPath } from "@/lib/i18n/paths";
+import { localizedPath, type PageSlug } from "@/lib/i18n/paths";
 
 export function Footer() {
   const { locale, dict } = useLocale();
   const ui = dict.ui;
   const year = new Date().getFullYear();
 
-  const columns = [
+  const columns: { title: string; links: { label: string; slug: PageSlug }[] }[] = [
     {
-      title: ui.footer.program,
+      title: ui.footer.explore,
       links: [
-        { label: ui.footer.partnerProgram, href: localizedPath(locale, "partner-program") },
-        { label: ui.footer.whyTpower, href: localizedPath(locale, "why-tpower") },
-        { label: ui.footer.benefits, href: localizedPath(locale, "benefits") },
-        { label: ui.footer.commission, href: localizedPath(locale, "commission") },
+        { label: ui.footer.home, slug: "" },
+        { label: ui.footer.games, slug: "games" },
+        { label: ui.footer.promotions, slug: "promotions" },
+        { label: ui.footer.payment, slug: "payment" },
+        { label: ui.footer.whyTpower, slug: "why-tpower" },
       ],
     },
     {
-      title: ui.footer.partners,
+      title: ui.footer.account,
       links: [
-        { label: ui.footer.partnerTypes, href: localizedPath(locale, "partner-types") },
-        { label: ui.footer.affiliateProgram, href: localizedPath(locale, "affiliate-program") },
-        { label: ui.footer.agentProgram, href: localizedPath(locale, "agent-program") },
-        { label: ui.footer.howItWorks, href: localizedPath(locale, "how-it-works") },
+        { label: ui.footer.register, slug: "register" },
+        { label: ui.footer.login, slug: "login" },
+        { label: ui.footer.about, slug: "about" },
       ],
     },
     {
-      title: ui.footer.resources,
+      title: ui.footer.help,
       links: [
-        { label: ui.footer.marketingResources, href: localizedPath(locale, "marketing-resources") },
-        { label: ui.footer.promotionalMaterials, href: localizedPath(locale, "promotional-materials") },
-        { label: ui.footer.partnerTools, href: localizedPath(locale, "partner-tools") },
-        { label: ui.footer.insights, href: localizedPath(locale, "partner-insights") },
-        { label: ui.footer.news, href: localizedPath(locale, "news") },
-      ],
-    },
-    {
-      title: ui.footer.support,
-      links: [
-        { label: ui.footer.faq, href: localizedPath(locale, "faq") },
-        { label: ui.footer.partnerSupport, href: localizedPath(locale, "partner-support") },
-        { label: ui.footer.contact, href: localizedPath(locale, "contact") },
-        { label: ui.footer.login, href: localizedPath(locale, "login") },
-        { label: ui.footer.register, href: localizedPath(locale, "register") },
+        { label: ui.footer.faq, slug: "faq" },
+        { label: ui.footer.support, slug: "support" },
+        { label: ui.footer.contact, slug: "contact" },
       ],
     },
     {
       title: ui.footer.legal,
       links: [
-        { label: ui.footer.terms, href: localizedPath(locale, "terms") },
-        { label: ui.footer.privacy, href: localizedPath(locale, "privacy") },
-        { label: ui.footer.compliance, href: localizedPath(locale, "compliance") },
-        { label: ui.footer.responsibleGaming, href: localizedPath(locale, "responsible-gaming") },
-        { label: ui.footer.affiliateGuidelines, href: localizedPath(locale, "affiliate-guidelines") },
-        { label: ui.footer.contentGuidelines, href: localizedPath(locale, "content-guidelines") },
+        { label: ui.footer.terms, slug: "terms" },
+        { label: ui.footer.privacy, slug: "privacy" },
+        { label: ui.footer.responsibleGaming, slug: "responsible-gaming" },
       ],
     },
   ];
@@ -69,12 +54,10 @@ export function Footer() {
     <footer className="casino-bg-dark border-t border-accent/20">
       <div className="h-1 w-full bg-gradient-to-r from-transparent via-accent-bright to-transparent" aria-hidden="true" />
       <Container className="py-16 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_repeat(5,1fr)]">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div>
             <Logo variant="inverse" />
-            <p className="mt-2 font-mono text-[9px] tracking-[0.25em] text-accent-bright uppercase">
-              {ui.site.tagline}
-            </p>
+            <p className="mt-2 font-mono text-[9px] tracking-[0.25em] text-accent-bright uppercase">{ui.site.tagline}</p>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/45">{ui.site.footerBlurb}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button href={localizedPath(locale, "register")} className="!px-4 !py-2 !text-[10px]">
@@ -91,13 +74,14 @@ export function Footer() {
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h3 className="mb-4 font-mono text-[10px] tracking-[0.2em] text-accent-bright uppercase">
-                {col.title}
-              </h3>
+              <h3 className="mb-4 font-mono text-[10px] tracking-[0.2em] text-accent-bright uppercase">{col.title}</h3>
               <ul className="space-y-2.5">
                 {col.links.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/55 transition-colors hover:text-white">
+                  <li key={`${col.title}-${link.slug || "home"}`}>
+                    <Link
+                      href={localizedPath(locale, link.slug)}
+                      className="text-sm text-white/55 transition-colors hover:text-white"
+                    >
                       {link.label}
                     </Link>
                   </li>

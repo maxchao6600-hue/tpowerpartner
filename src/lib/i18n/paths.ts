@@ -1,10 +1,21 @@
 import type { Locale } from "./config";
 
-/** All 30 logical page slugs (empty string = home). */
+/** Logical page slugs (empty string = home). */
 export const pageSlugs = [
   "",
+  "games",
+  "promotions",
+  "payment",
+  "faq",
+  "support",
   "about",
   "why-tpower",
+  "responsible-gaming",
+  "terms",
+  "privacy",
+  "contact",
+  "news",
+  // Legacy partner routes retained for URL continuity (footer / redirects)
   "partner-program",
   "how-it-works",
   "commission",
@@ -20,16 +31,10 @@ export const pageSlugs = [
   "tracking-reporting",
   "payments",
   "compliance",
-  "responsible-gaming",
   "affiliate-guidelines",
   "content-guidelines",
-  "faq",
-  "contact",
   "partner-support",
-  "news",
   "partner-insights",
-  "terms",
-  "privacy",
   "register",
   "login",
 ] as const;

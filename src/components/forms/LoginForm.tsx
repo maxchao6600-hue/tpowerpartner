@@ -81,8 +81,8 @@ export function LoginForm() {
             <div className="py-8 text-center" role="status">
               <p className="text-sm text-white/50">
                 {locale === "zh"
-                  ? "登录功能将在合作伙伴后台接入后启用。"
-                  : "Login will be available through the partner dashboard once your account is active."}
+                  ? "登录功能将在账户系统接入后启用。"
+                  : "Login will be available once your TPOWER account access is active."}
               </p>
             </div>
           ) : (

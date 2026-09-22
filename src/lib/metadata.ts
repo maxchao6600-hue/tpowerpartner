@@ -24,8 +24,8 @@ export function createPageMetadata({
   const fullTitle =
     slug === ""
       ? locale === "zh"
-        ? `${siteConfig.name} | TPOWER 官方在线赌场合作伙伴计划`
-        : `${siteConfig.name} | Official TPOWER Casino Partner Program`
+        ? `TPOWER 在线赌场 | 官方合作伙伴网站`
+        : `TPOWER Online Casino | Official TPOWER Partner`
       : `${title} | ${siteConfig.name}`;
 
   const ogImage = `${siteConfig.url}${brandAssets.partnerHero}`;

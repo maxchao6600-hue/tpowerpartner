@@ -1,137 +1,97 @@
-import type { HomeContent } from "@/content/en/home";
-
-export const homeContent: HomeContent = {
+export const homeContent = {
   hero: {
-    eyebrow: "TPOWER 官方合作伙伴计划",
-    title1: "与 TPOWER 网络",
-    title2: "共同成长。",
+    eyebrow: "TPOWER 官方在线赌场",
+    title1: "畅玩",
+    title2: "TPOWER。",
     description:
-      "加入 TPOWER 官方合作伙伴计划，借助专属合作伙伴资源、数据追踪、专业支持与绩效导向的合作机会，构建您的下一个增长机遇。",
-    trustLabel: "TPOWER 官方合作伙伴平台",
+      "通过官方合作伙伴网站访问 TPOWER 在线赌场。注册账户、探索可用游戏，享受安全便捷的在线娱乐体验。",
+    trustLabel: "TPOWER 官方合作伙伴网站",
   },
-  identity: {
-    label: "TPOWER 官方合作伙伴",
-    title1: "进入 TPOWER 赌场的",
-    title2: "官方合作通道。",
+  intro: {
+    label: "TPOWER 在线赌场",
+    title1: "TPOWER",
+    title2: "在线赌场",
     description:
-      "TPOWER 合作伙伴是面向 TPOWER 在线赌场联盟推广者与代理的官方平台。提交注册申请，或如您已是合作伙伴请直接登录。",
-    cardTitle1: "TPOWER 在线赌场",
-    cardTitle2: "合作伙伴计划",
-    cardBody:
-      "官方注册、合作伙伴后台、追踪工具与推广资源——统一在一个 TPOWER 品牌合作伙伴平台中完成。",
+      "TPOWER 是在线赌场与在线娱乐平台。通过本官方合作伙伴网站，您可注册 TPOWER 账户、登录、探索赌场游戏、查看优惠、了解支付信息并联系客服支持。",
+    points: [
+      { title: "在线游戏", body: "通过本官方入口探索 TPOWER 可用的赌场游戏类别。" },
+      { title: "账户访问", body: "注册新的 TPOWER 账户，或登录已有账户。" },
+      { title: "优惠活动", body: "查看官方合作伙伴网站提供的优惠相关信息。" },
+      { title: "客户支持", body: "获取注册、登录及一般账户问题的协助。" },
+    ],
   },
-  casino: {
-    label: "高端赌场品牌",
-    title1: "赌场品牌氛围。",
-    title2: "合作伙伴绩效。",
+  games: {
+    label: "赌场游戏",
+    title: "探索 TPOWER 游戏",
+    description: "了解 TPOWER 提供的在线赌场游戏类别。具体游戏可用性可能因账户与市场而异。",
+    categories: [
+      { title: "电子游艺", body: "以娱乐为主的在线老虎机游戏。" },
+      { title: "真人娱乐城", body: "在可用情况下提供真人荷官体验。" },
+      { title: "桌面游戏", body: "经典赌场桌面游戏选项。" },
+      { title: "热门游戏", body: "精选及常玩游戏，方便快速发现。" },
+    ],
+    link: "探索游戏",
+    note: "具体游戏列表与供应商信息请在登录 TPOWER 账户后确认。",
+  },
+  promotions: {
+    label: "优惠活动",
+    title: "TPOWER 优惠",
     description:
-      "TPOWER 是为娱乐与玩家参与而打造的高端在线赌场。合作伙伴将该品牌与流量、推广活动及绩效导向的增长相连接。",
+      "优惠详情通过官方 TPOWER 渠道及您的账户提供。本合作伙伴网站帮助您找到正确入口——不会发布未经核实的奖金金额。",
+    items: [
+      { title: "账户优惠", body: "符合条件的账户优惠将在注册并登录后显示。" },
+      { title: "季节活动", body: "限时活动可能在平台内进行时出现。" },
+      { title: "持续奖励", body: "持续奖励信息通过官方账户访问确认。" },
+    ],
+    link: "查看优惠",
+    note: "奖金金额、比例与条款以您的 TPOWER 账户内信息为准——本站不会编造数据。",
+  },
+  getStarted: {
+    label: "账户访问",
+    title: "开始使用 TPOWER",
+    description: "从首次访问到通过官方合作伙伴网站畅玩的清晰路径。",
+    steps: [
+      { title: "注册", body: "通过注册页面创建您的 TPOWER 账户。" },
+      { title: "登录", body: "使用账户凭证登录。" },
+      { title: "探索游戏", body: "浏览可用的在线赌场游戏类别。" },
+      { title: "管理账户", body: "查看优惠、支付选项与支持资源。" },
+    ],
+  },
+  payment: {
+    label: "支付",
+    title: "便捷支付方式",
+    description: "TPOWER 为符合条件的账户提供便捷的存取款选项。具体方式取决于您的市场与账户状态。",
+    items: [
+      { title: "安全处理", body: "支付活动通过官方 TPOWER 账户渠道处理。" },
+      { title: "多种选择", body: "可用方式在登录后于账户内显示。" },
+      { title: "清晰指引", body: "注册前可先通过支付页面了解一般信息。" },
+    ],
+    link: "支付方式",
+    note: "本站不列出未经核实的支付服务商，也不保证处理时效。",
   },
   why: {
     label: "为何选择 TPOWER",
-    title1: "值得推广的",
-    title2: "赌场品牌。",
-    description:
-      "联盟推广者、代理与流量合作伙伴可推广具有辨识度的 TPOWER 赌场品牌——并获得工具、报表与结构化计划支持。",
+    title1: "为何选择",
+    title2: "TPOWER",
     reasons: [
-      { title: "品牌", description: "使用获批赌场品牌资产，以高端娱乐定位推广 TPOWER。", icon: "♠" },
-      { title: "支持", description: "从申请审核、入驻到计划参与，全程提供合作伙伴协助。", icon: "♦" },
-      { title: "工具", description: "获批后可使用追踪链接、推广素材与合作伙伴后台。", icon: "♣" },
-      { title: "绩效", description: "通过官方合作伙伴平台查看推广活动与效果。", icon: "♥" },
+      { title: "在线赌场选择", description: "通过 TPOWER 访问多种在线赌场与游戏类别。", icon: "♠" },
+      { title: "清晰账户入口", description: "本官方合作伙伴网站提供明确的注册与登录路径。", icon: "♦" },
+      { title: "客户支持", description: "支持渠道协助处理注册、登录与账户问题。", icon: "♣" },
+      { title: "移动端友好", description: "在桌面与移动设备上均可便捷浏览与访问 TPOWER 信息。", icon: "♥" },
+      { title: "支付信息", description: "开户前即可了解支付方式相关说明。", icon: "★" },
+      { title: "负责任博彩", description: "提供清晰的负责任博彩指引，理性娱乐。", icon: "◆" },
     ],
-  },
-  benefits: {
-    label: "合作优势",
-    title: "获批合作伙伴可享权益",
-    items: [
-      { num: "01", title: "官方品牌授权", body: "获批 TPOWER 标识、视觉素材与品牌使用指南，用于您的推广活动。" },
-      { num: "02", title: "合作伙伴支持", body: "注册、入驻、账户访问与计划咨询方面的协助。" },
-      { num: "03", title: "营销资源", body: "通过合作伙伴后台获取横幅、创意素材与推广内容。" },
-      { num: "04", title: "追踪与报表", body: "专属追踪链接与推广效果可视化。" },
-      { num: "05", title: "成长路径", body: "根据绩效与计划指南，逐步扩展合作关系。" },
-    ],
-  },
-  partnerTypes: {
-    label: "合作伙伴类型",
-    title: "谁可以合作",
-    types: [
-      { name: "联盟推广", description: "通过获批渠道驱动优质流量的绩效营销人员。" },
-      { name: "网站主", description: "在相关市场拥有稳定受众的网站运营者。" },
-      { name: "内容创作者", description: "制作评测、指南与娱乐内容的创作者。" },
-      { name: "社交媒体", description: "通过社交平台与社群建立影响力的合作伙伴。" },
-      { name: "流量合作伙伴", description: "专注付费与有机获客渠道的专业人士。" },
-      { name: "代理", description: "管理玩家与合作伙伴关系的区域代表。" },
-    ],
-    link: "了解合作伙伴类型",
-  },
-  howItWorks: {
-    label: "计划运作方式",
-    title: "五步开启合作",
-    steps: [
-      { title: "注册", body: "通过官方注册页面提交您的申请。" },
-      { title: "审核通过", body: "我们的团队将根据计划指南审核您的申请。" },
-      { title: "进入计划", body: "获批合作伙伴将获得后台与工具访问权限。" },
-      { title: "推广 TPOWER", body: "通过获批渠道与追踪链接驱动流量。" },
-      { title: "持续增长", body: "建立绩效并随时间扩展合作关系。" },
-    ],
-    link: "查看完整指南",
-  },
-  commission: {
-    label: "绩效框架",
-    title: "佣金如何运作",
-    body: "佣金基于绩效，具体条款在合作伙伴协议中约定，详情在获批后提供。",
-    flow: [
-      { title: "流量", body: "通过获批追踪链接引入的合作伙伴流量。" },
-      { title: "追踪活动", body: "推广活动在合作伙伴平台中记录。" },
-      { title: "合格行为", body: "根据计划指南识别符合条件的玩家行为。" },
-      { title: "绩效审核", body: "依据合作伙伴协议审核推广结果。" },
-      { title: "数据报表", body: "通过合作伙伴报表工具查看绩效数据。" },
-      { title: "结算", body: "获批佣金按协议约定处理。" },
-    ],
-    disclaimer:
-      "具体佣金比例、CPA 金额、revenue share 百分比、结算周期与门槛均依据适用的合作伙伴协议确认。",
-    link: "佣金详情",
-  },
-  resources: {
-    label: "营销资源",
-    title: "合作伙伴资源中心",
-    items: [
-      { title: "品牌资产", body: "TPOWER 官方标识、色彩与品牌使用指南。" },
-      { title: "创意素材", body: "横幅、视觉与可直接用于推广的创意素材。" },
-      { title: "推广素材", body: "季节性及常青推广内容。" },
-      { title: "追踪资源", body: "链接配置、报表访问与推广追踪工具。" },
-    ],
-    note: "获批后通过合作伙伴后台获取。",
-    link: "查看资源",
-  },
-  tools: {
-    label: "合作伙伴工具",
-    title: "为绩效而设",
-    items: [
-      { title: "合作伙伴后台", body: "账户管理与计划访问的中央枢纽。" },
-      { title: "追踪链接", body: "用于推广归因的专属追踪 URL。" },
-      { title: "数据报表", body: "获批合作伙伴推广活动的效果可视化。" },
-    ],
-    link: "探索合作伙伴工具",
-  },
-  support: {
-    label: "合作伙伴支持",
-    title: "全程协助",
-    items: [
-      { title: "注册协助", body: "合作伙伴申请流程指导。" },
-      { title: "账户支持", body: "登录、凭证与账户管理协助。" },
-      { title: "计划咨询", body: "佣金、追踪与推广相关问题解答。" },
-    ],
-    link: "联系合作伙伴支持",
   },
   faq: {
     label: "常见问题",
-    title: "热门问题",
-    link: "查看全部常见问题",
+    title: "常见问题",
+    link: "查看全部 FAQ",
   },
   cta: {
-    title: "申请成为 TPOWER 合作伙伴",
-    body: "通过官方合作伙伴平台注册，或登录您现有的合作伙伴账户。",
-    trustLabel: "TPOWER 官方合作伙伴计划",
+    title: "准备好畅玩 TPOWER 了吗？",
+    body: "通过本官方合作伙伴网站注册 TPOWER 账户，或登录已有账户。",
+    trustLabel: "TPOWER 官方合作伙伴网站",
   },
 };
+
+export type HomeContent = typeof homeContent;

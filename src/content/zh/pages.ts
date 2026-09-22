@@ -11,28 +11,211 @@ function p(
 }
 
 export const pages: Record<string, PageContent> = {
-  about: p(
-    "about",
+  games: p(
+    "games",
     {
-      title: "关于 TPOWER 合作伙伴",
-      description:
-        "了解 TPOWER 合作伙伴是什么、与 TPOWER 赌场的关系，以及官方合作伙伴计划面向哪些人群。",
+      title: "TPOWER 游戏",
+      description: "探索 TPOWER 在线赌场游戏类别，包括电子游艺、真人娱乐城与桌面游戏。",
     },
     {
-      label: "关于",
-      title: "关于 ",
-      titleHighlight: "TPOWER 合作伙伴",
-      description:
-        "TPOWER 赌场的官方合作伙伴平台——为联盟推广伙伴、代理及增长型合作伙伴而打造。",
+      label: "游戏",
+      title: "探索 ",
+      titleHighlight: "TPOWER 游戏",
+      description: "通过 TPOWER 提供的在线赌场游戏类别。",
+      variant: "dark",
+    },
+    [
+      {
+        type: "prose",
+        paragraphs: [
+          "TPOWER 提供在线赌场与在线娱乐体验。通过本官方合作伙伴网站，您可在注册或登录前了解可用游戏类别。",
+          "具体游戏列表与供应商请在登录 TPOWER 账户后确认，并可能因市场而异。",
+        ],
+      },
+      {
+        type: "grid",
+        heading: "游戏类别",
+        items: [
+          { title: "电子游艺", body: "以娱乐为主的在线老虎机游戏。" },
+          { title: "真人娱乐城", body: "在平台可用时提供的真人荷官体验。" },
+          { title: "桌面游戏", body: "通过 TPOWER 提供的经典赌场桌面游戏选项。" },
+          { title: "热门游戏", body: "账户开通后便于发现的精选与常玩游戏。" },
+        ],
+      },
+      {
+        type: "notice",
+        body: "准备开玩？请通过本官方合作伙伴网站注册 TPOWER 账户或登录。",
+      },
+      {
+        type: "related",
+        heading: "下一步",
+        links: [
+          { label: "立即注册", slug: "register" },
+          { label: "登录", slug: "login" },
+          { label: "优惠", slug: "promotions" },
+          { label: "常见问题", slug: "faq" },
+        ],
+      },
+    ],
+  ),
+
+  promotions: p(
+    "promotions",
+    {
+      title: "TPOWER 优惠",
+      description: "通过本官方合作伙伴网站了解 TPOWER 优惠如何运作。具体优惠请以账户内信息为准。",
+    },
+    {
+      label: "优惠",
+      title: "TPOWER ",
+      titleHighlight: "优惠",
+      description: "面向 TPOWER 在线赌场用户的优惠信息。",
+      variant: "red",
+    },
+    [
+      {
+        type: "prose",
+        paragraphs: [
+          "TPOWER 可能通过官方渠道提供账户优惠与季节性活动。",
+          "本站不会编造奖金金额、比例或保证奖励。符合条件的优惠在注册并登录后确认。",
+        ],
+      },
+      {
+        type: "cards",
+        heading: "您可以期待",
+        items: [
+          { tag: "01", title: "账户优惠", body: "创建并访问 TPOWER 账户后，可查看符合条件的优惠。" },
+          { tag: "02", title: "季节活动", body: "限时活动可能在平台进行时出现。" },
+          { tag: "03", title: "条款适用", body: "优惠条款与资格以官方账户渠道确认为准。" },
+        ],
+      },
+      {
+        type: "related",
+        heading: "下一步",
+        links: [
+          { label: "创建 TPOWER 账户", slug: "register" },
+          { label: "登录", slug: "login" },
+          { label: "游戏", slug: "games" },
+          { label: "支持", slug: "support" },
+        ],
+      },
+    ],
+  ),
+
+  payment: p(
+    "payment",
+    {
+      title: "支付方式",
+      description: "关于 TPOWER 支付选项的一般信息。具体方式取决于您的市场与账户状态。",
+    },
+    {
+      label: "支付",
+      title: "支付",
+      titleHighlight: "方式",
+      description: "为符合条件的 TPOWER 账户提供便捷存取款选项。",
+      variant: "felt",
+    },
+    [
+      {
+        type: "prose",
+        paragraphs: [
+          "TPOWER 为符合条件的账户提供便捷支付选项。可用方式取决于您的市场、验证状态与账户设置。",
+          "本站不列出未经核实的支付服务商，也不编造处理保证。具体选项请在登录后查看。",
+        ],
+      },
+      {
+        type: "grid",
+        items: [
+          { title: "安全渠道", body: "支付活动通过官方 TPOWER 账户渠道处理。" },
+          { title: "账户可见", body: "注册并登录后，可在账户内查看支持的方式。" },
+          { title: "支持协助", body: "如需账户支付相关指引，请联系支持。" },
+        ],
+      },
+      {
+        type: "related",
+        heading: "下一步",
+        links: [
+          { label: "立即注册", slug: "register" },
+          { label: "登录", slug: "login" },
+          { label: "常见问题", slug: "faq" },
+          { label: "支持", slug: "support" },
+        ],
+      },
+    ],
+  ),
+
+  support: p(
+    "support",
+    {
+      title: "客户支持",
+      description: "通过本官方合作伙伴网站获取 TPOWER 注册、登录、游戏、支付与账户问题协助。",
+    },
+    {
+      label: "支持",
+      title: "客户",
+      titleHighlight: "支持",
+      description: "为 TPOWER 在线赌场用户提供协助。",
       variant: "cta",
     },
     [
       {
         type: "prose",
         paragraphs: [
-          "TPOWER 合作伙伴是面向希望以结构化合作伙伴计划方式与 TPOWER 赌场开展合作的个人与企业的官方平台。",
-          "本网站提供计划信息、合作伙伴注册、账户登录以及获批合作伙伴所需资源。它与面向玩家的 TPOWER 赌场官网相互独立。",
-          "该计划面向联盟营销人员、网站主、内容创作者、社交媒体合作伙伴、流量合作伙伴，以及具备合法推广渠道的代理。",
+          "需要帮助访问 TPOWER？请通过本官方合作伙伴网站找到注册、登录与支持路径。",
+          "如有账户相关问题，请通过联系我们页面或发送邮件至 partners@tpowerpartner.com。",
+        ],
+      },
+      {
+        type: "grid",
+        items: [
+          { title: "注册协助", body: "创建 TPOWER 账户的相关指引。" },
+          { title: "登录协助", body: "登录已有账户的相关协助。" },
+          { title: "账户问题", body: "关于游戏、优惠与支付的一般问题。" },
+        ],
+      },
+      {
+        type: "related",
+        heading: "相关链接",
+        links: [
+          { label: "常见问题", slug: "faq" },
+          { label: "联系我们", slug: "contact" },
+          { label: "注册", slug: "register" },
+          { label: "登录", slug: "login" },
+        ],
+      },
+    ],
+  ),
+
+  about: p(
+    "about",
+    {
+      title: "关于 TPOWER",
+      description: "了解 TPOWER 在线赌场以及本官方合作伙伴网站的注册、登录与账户访问。",
+    },
+    {
+      label: "关于",
+      title: "关于 ",
+      titleHighlight: "TPOWER",
+      description: "TPOWER 在线赌场官方合作伙伴网站。",
+      variant: "cta",
+    },
+    [
+      {
+        type: "prose",
+        paragraphs: [
+          "TPOWER 是在线赌场与在线娱乐平台。本网站为 TPOWER 官方合作伙伴网站，帮助用户注册、登录，并获取游戏、优惠、支付与支持相关信息。",
+          "本站的核心目标是清晰的赌场访问入口——而非联盟招募或商业机会营销。",
+          "新用户请使用「立即注册」，已有账户请使用「登录」。",
+        ],
+      },
+      {
+        type: "related",
+        heading: "探索",
+        links: [
+          { label: "游戏", slug: "games" },
+          { label: "优惠", slug: "promotions" },
+          { label: "为何选择 TPOWER", slug: "why-tpower" },
+          { label: "注册", slug: "register" },
         ],
       },
     ],
@@ -43,40 +226,50 @@ export const pages: Record<string, PageContent> = {
     {
       title: "为何选择 TPOWER",
       description:
-        "了解合作伙伴为何选择 TPOWER——品牌实力、赌场生态、支持体系与增长机遇。",
+        "了解玩家为何选择 TPOWER 在线赌场——游戏、账户访问、支持、支付与负责任娱乐。",
     },
     {
       label: "为何选择 TPOWER",
-      title: "为何与 ",
+      title: "为何选择 ",
       titleHighlight: "TPOWER",
-      description: "高端在线赌场品牌，配备专为业绩表现打造的合作伙伴计划。",
+      description: "通过本官方合作伙伴网站访问 TPOWER 的清晰理由。",
       variant: "red",
     },
     [
       {
         type: "cards",
-        heading: "TPOWER 核心优势",
+        heading: "TPOWER 体验",
         items: [
           {
             tag: "01",
-            title: "成熟的赌场品牌",
-            body: "TPOWER 是广受认可的在线赌场品牌。合作伙伴推广的是具备高端定位与鲜明视觉识别度的产品。",
+            title: "在线赌场选择",
+            body: "通过 TPOWER 访问在线赌场与游戏类别。",
           },
           {
             tag: "02",
-            title: "以合作伙伴为先的平台",
-            body: "TPOWER 合作伙伴专为联盟推广伙伴与代理而建——注册、入驻与计划信息集中于一站。",
+            title: "简洁账户入口",
+            body: "本官方合作伙伴网站提供清晰的注册与登录路径。",
           },
           {
             tag: "03",
-            title: "增长机遇",
-            body: "合作伙伴在积累优质流量并遵循计划规范的前提下，可通过官方计划逐步扩大合作规模。",
+            title: "客户支持",
+            body: "支持资源协助处理注册、登录与账户问题。",
           },
           {
             tag: "04",
-            title: "支持与资源",
-            body: "获批合作伙伴可依据协议条款，使用合作伙伴工具、推广素材及支持渠道。",
+            title: "移动端友好",
+            body: "在桌面与移动设备上均可便捷浏览 TPOWER 信息。",
           },
+        ],
+      },
+      {
+        type: "related",
+        heading: "下一步",
+        links: [
+          { label: "立即注册", slug: "register" },
+          { label: "游戏", slug: "games" },
+          { label: "支付", slug: "payment" },
+          { label: "常见问题", slug: "faq" },
         ],
       },
     ],
@@ -708,13 +901,13 @@ export const pages: Record<string, PageContent> = {
     "faq",
     {
       title: "常见问题",
-      description: "关于 TPOWER 合作伙伴计划的常见问题解答。",
+      description: "关于 TPOWER 在线赌场访问、注册、登录、游戏与支持的常见问题。",
     },
     {
       label: "常见问题",
       title: "常见 ",
       titleHighlight: "问题",
-      description: "合作伙伴计划常见疑问解答。",
+      description: "通过本官方合作伙伴网站访问 TPOWER 的常见疑问解答。",
       variant: "dark",
     },
     [],
@@ -724,20 +917,20 @@ export const pages: Record<string, PageContent> = {
     "contact",
     {
       title: "联系我们",
-      description: "就计划与账户问题联系 TPOWER 合作伙伴支持。",
+      description: "就注册、登录与账户问题联系 TPOWER 支持。",
     },
     {
       label: "联系我们",
       title: "联系 ",
       titleHighlight: "支持",
-      description: "联系 TPOWER 合作伙伴团队。",
+      description: "联系 TPOWER 支持团队。",
       variant: "red",
     },
     [
       {
         type: "prose",
         paragraphs: [
-          "如有合作伙伴计划咨询、账户问题或推广支持需求，请通过本页表单联系我们，或发送邮件至 partners@tpowerpartner.com。",
+          "如有注册、登录或账户相关问题，请通过本页表单联系我们，或发送邮件至 partners@tpowerpartner.com。",
         ],
       },
     ],
@@ -936,13 +1129,13 @@ export const pages: Record<string, PageContent> = {
     "register",
     {
       title: "注册",
-      description: "注册 TPOWER 合作伙伴计划。",
+      description: "通过本官方合作伙伴网站注册您的 TPOWER 在线赌场账户。",
     },
     {
       label: "注册",
-      title: "成为 ",
-      titleHighlight: "TPOWER 合作伙伴",
-      description: "加入官方 TPOWER 合作伙伴计划。",
+      title: "创建您的 ",
+      titleHighlight: "TPOWER 账户",
+      description: "通过 TPOWER 官方合作伙伴网站注册。",
       variant: "image",
     },
     [],
@@ -953,13 +1146,13 @@ export const pages: Record<string, PageContent> = {
     "login",
     {
       title: "登录",
-      description: "登录您的 TPOWER 合作伙伴账户。",
+      description: "通过本官方合作伙伴网站登录您的 TPOWER 账户。",
     },
     {
       label: "登录",
-      title: "欢迎回来，",
-      titleHighlight: "合作伙伴",
-      description: "访问您的 TPOWER 合作伙伴后台。",
+      title: "欢迎",
+      titleHighlight: "回来",
+      description: "登录您的 TPOWER 账户。",
       variant: "image",
     },
     [],

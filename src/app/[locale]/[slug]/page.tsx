@@ -70,7 +70,7 @@ export default async function ContentPage({ params }: Props) {
           page={page}
           locale={raw}
           faq={dict.faq}
-          cta={{ register: dict.ui.cta.registerNow, login: dict.ui.cta.login, contact: dict.ui.mega.contact }}
+          cta={{ register: dict.ui.cta.registerNow, login: dict.ui.cta.login, contact: dict.ui.footer.contact }}
         />
         <ContactForm />
       </>
@@ -84,7 +84,7 @@ export default async function ContentPage({ params }: Props) {
         page={page}
         locale={raw}
         faq={dict.faq}
-        cta={{ register: dict.ui.cta.registerNow, login: dict.ui.cta.login, contact: dict.ui.mega.contact }}
+        cta={{ register: dict.ui.cta.registerNow, login: dict.ui.cta.login, contact: dict.ui.footer.contact }}
       />
     </>
   );
