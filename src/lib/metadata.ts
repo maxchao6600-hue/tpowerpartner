@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { locales, type Locale, ogLocale } from "@/lib/i18n/config";
-import { localizedPath, type PageSlug } from "@/lib/i18n/paths";
+import { localizedPath, isLegacyPartnerSlug, type PageSlug } from "@/lib/i18n/paths";
 import { siteConfig } from "@/lib/site";
 import { brandAssets } from "@/lib/assets";
 
@@ -12,6 +12,21 @@ type PageMeta = {
   noIndex?: boolean;
 };
 
+function brandSuffix(locale: Locale) {
+  return locale === "zh" ? "TPOWER 官方合作伙伴" : "Official TPOWER Partner";
+}
+
+function resolveTitle(title: string, locale: Locale, slug: PageSlug): string {
+  if (slug === "") {
+    return locale === "zh"
+      ? "TPOWER 在线赌场 | 官方合作伙伴网站"
+      : "TPOWER Online Casino | Official TPOWER Partner";
+  }
+  // Allow fully composed titles (e.g. payment page)
+  if (title.includes("|")) return title;
+  return `${title} | ${brandSuffix(locale)}`;
+}
+
 export function createPageMetadata({
   title,
   description,
@@ -21,12 +36,8 @@ export function createPageMetadata({
 }: PageMeta): Metadata {
   const path = localizedPath(locale, slug);
   const url = `${siteConfig.url}${path}`;
-  const fullTitle =
-    slug === ""
-      ? locale === "zh"
-        ? `TPOWER 在线赌场 | 官方合作伙伴网站`
-        : `TPOWER Online Casino | Official TPOWER Partner`
-      : `${title} | ${siteConfig.name}`;
+  const fullTitle = resolveTitle(title, locale, slug);
+  const shouldNoIndex = noIndex || isLegacyPartnerSlug(slug) || slug === "login" || slug === "register";
 
   const ogImage = `${siteConfig.url}${brandAssets.partnerHero}`;
 
@@ -42,8 +53,6 @@ export function createPageMetadata({
     description,
     applicationName: siteConfig.name,
     metadataBase: new URL(siteConfig.url),
-    // Favicon/site icons: App Router file convention (src/app/favicon.ico, icon.png, apple-icon.png)
-    // generated from the Header Logo at public/brand/tpower-logo.png — do not dual-declare here.
     manifest: brandAssets.webManifest,
     alternates: {
       canonical: url,
@@ -56,7 +65,14 @@ export function createPageMetadata({
       siteName: siteConfig.name,
       locale: ogLocale[locale],
       type: "website",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: siteConfig.name }],
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: locale === "zh" ? "TPOWER 在线赌场" : "TPOWER Online Casino",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -64,7 +80,7 @@ export function createPageMetadata({
       description,
       images: [ogImage],
     },
-    robots: noIndex
+    robots: shouldNoIndex
       ? { index: false, follow: false }
       : { index: true, follow: true },
   };

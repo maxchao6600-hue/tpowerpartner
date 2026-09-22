@@ -297,8 +297,12 @@ export function PageRenderer({ page, locale, faq, cta }: PageRendererProps) {
         <section className="casino-bg-red py-14">
           <Container className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
             <div>
-              <p className="font-mono text-[10px] tracking-[0.2em] text-white/60 uppercase">TPOWER Partner</p>
-              <h2 className="mt-2 font-display text-xl font-extrabold uppercase text-white">{cta.register}</h2>
+              <p className="font-mono text-[10px] tracking-[0.2em] text-white/60 uppercase">
+                {locale === "zh" ? "TPOWER 官方合作伙伴网站" : "Official TPOWER Partner Website"}
+              </p>
+              <h2 className="mt-2 font-display text-xl font-extrabold uppercase text-white">
+                {locale === "zh" ? "准备好开始了吗？" : "Ready to get started?"}
+              </h2>
             </div>
             <div className="flex gap-3">
               <Button href={localizedPath(locale, "register")}>{cta.register}</Button>

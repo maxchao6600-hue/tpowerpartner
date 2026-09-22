@@ -1,7 +1,7 @@
 import type { Locale } from "./config";
 
-/** Logical page slugs (empty string = home). */
-export const pageSlugs = [
+/** Primary casino-facing pages (preferred IA). */
+export const primarySlugs = [
   "",
   "games",
   "promotions",
@@ -15,7 +15,12 @@ export const pageSlugs = [
   "privacy",
   "contact",
   "news",
-  // Legacy partner routes retained for URL continuity (footer / redirects)
+  "register",
+  "login",
+] as const;
+
+/** Legacy affiliate/partner recruitment routes retained for URL continuity. */
+export const legacyPartnerSlugs = [
   "partner-program",
   "how-it-works",
   "commission",
@@ -35,13 +40,24 @@ export const pageSlugs = [
   "content-guidelines",
   "partner-support",
   "partner-insights",
-  "register",
-  "login",
 ] as const;
 
+/** All logical page slugs (empty string = home). */
+export const pageSlugs = [...primarySlugs, ...legacyPartnerSlugs] as const;
+
 export type PageSlug = (typeof pageSlugs)[number];
+export type LegacyPartnerSlug = (typeof legacyPartnerSlugs)[number];
 
 export const contentSlugs = pageSlugs.filter((s) => s !== "") as Exclude<PageSlug, "">[];
+
+/** Slugs that should appear in sitemap (indexable public pages). */
+export const sitemapSlugs = primarySlugs.filter(
+  (s) => s !== "register" && s !== "login",
+) as Exclude<PageSlug, "register" | "login">[];
+
+export function isLegacyPartnerSlug(slug: string): boolean {
+  return (legacyPartnerSlugs as readonly string[]).includes(slug);
+}
 
 export function localizedPath(locale: Locale, slug: PageSlug = ""): string {
   if (slug === "") return `/${locale}`;

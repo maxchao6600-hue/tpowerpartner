@@ -14,8 +14,8 @@ export const pages: Record<string, PageContent> = {
   games: p(
     "games",
     {
-      title: "TPOWER 游戏",
-      description: "探索 TPOWER 在线赌场游戏类别，包括电子游艺、真人娱乐城与桌面游戏。",
+      title: "TPOWER 赌场游戏",
+      description: "通过本官方合作伙伴网站探索 TPOWER 在线赌场游戏类别，包括电子游艺、真人娱乐城与桌面游戏。",
     },
     {
       label: "游戏",
@@ -62,8 +62,8 @@ export const pages: Record<string, PageContent> = {
   promotions: p(
     "promotions",
     {
-      title: "TPOWER 优惠",
-      description: "通过本官方合作伙伴网站了解 TPOWER 优惠如何运作。具体优惠请以账户内信息为准。",
+      title: "TPOWER 优惠活动",
+      description: "通过本官方合作伙伴网站了解 TPOWER 在线赌场优惠如何运作。具体优惠请以登录后账户内信息为准。",
     },
     {
       label: "优惠",
@@ -105,8 +105,8 @@ export const pages: Record<string, PageContent> = {
   payment: p(
     "payment",
     {
-      title: "支付方式",
-      description: "关于 TPOWER 支付选项的一般信息。具体方式取决于您的市场与账户状态。",
+      title: "TPOWER 支付方式 | TPOWER 在线赌场",
+      description: "了解符合条件账户可用的 TPOWER 支付选项。具体存取款方式请在登录后确认。",
     },
     {
       label: "支付",
@@ -147,7 +147,7 @@ export const pages: Record<string, PageContent> = {
   support: p(
     "support",
     {
-      title: "客户支持",
+      title: "TPOWER 赌场客户支持",
       description: "通过本官方合作伙伴网站获取 TPOWER 注册、登录、游戏、支付与账户问题协助。",
     },
     {
@@ -189,7 +189,7 @@ export const pages: Record<string, PageContent> = {
   about: p(
     "about",
     {
-      title: "关于 TPOWER",
+      title: "关于 TPOWER 在线赌场",
       description: "了解 TPOWER 在线赌场以及本官方合作伙伴网站的注册、登录与账户访问。",
     },
     {
@@ -224,7 +224,7 @@ export const pages: Record<string, PageContent> = {
   "why-tpower": p(
     "why-tpower",
     {
-      title: "为何选择 TPOWER",
+      title: "为何选择 TPOWER 赌场",
       description:
         "了解玩家为何选择 TPOWER 在线赌场——游戏、账户访问、支持、支付与负责任娱乐。",
     },
@@ -811,31 +811,42 @@ export const pages: Record<string, PageContent> = {
     "responsible-gaming",
     {
       title: "负责任博彩",
-      description: "面向 TPOWER 合作伙伴及其受众的负责任博彩信息。",
+      description: "TPOWER 在线赌场负责任博彩指引。请理性娱乐。",
     },
     {
       label: "负责任博彩",
       title: "负责任 ",
       titleHighlight: "博彩",
-      description: "以负责任的方式推广赌场娱乐。",
+      description: "在线赌场娱乐应保持理性与可控。",
       variant: "felt",
     },
     [
       {
         type: "prose",
         paragraphs: [
-          "TPOWER 致力于负责任博彩。合作伙伴在以合乎伦理的方式推广赌场娱乐方面发挥着重要作用。",
-          "合作伙伴不得面向未成年人、弱势群体推广，也不得使用鼓励非理性博彩行为的表述。",
+          "TPOWER 在线赌场娱乐存在风险。博彩不应被视为赚钱或解决财务问题的途径。",
+          "请理性娱乐。设定个人限额，适时休息；若游戏不再令人愉悦，请立即停止。",
         ],
       },
       {
         type: "list",
-        heading: "合作伙伴规范",
+        heading: "理性娱乐建议",
         items: [
-          "不得面向未成年受众推广",
-          "在适当场合纳入负责任博彩相关表述",
-          "避免将博彩描述为解决财务问题的途径",
-          "鼓励玩家设定限额，在能力范围内娱乐",
+          "只用可承受损失的资金进行娱乐",
+          "不要追回损失",
+          "开始前设定时间与消费限额",
+          "不允许未成年人接触博彩内容",
+          "若难以控制博彩行为，请寻求帮助",
+        ],
+      },
+      {
+        type: "related",
+        heading: "相关页面",
+        links: [
+          { label: "支持", slug: "support" },
+          { label: "常见问题", slug: "faq" },
+          { label: "条款", slug: "terms" },
+          { label: "隐私", slug: "privacy" },
         ],
       },
     ],
@@ -900,8 +911,8 @@ export const pages: Record<string, PageContent> = {
   faq: p(
     "faq",
     {
-      title: "常见问题",
-      description: "关于 TPOWER 在线赌场访问、注册、登录、游戏与支持的常见问题。",
+      title: "TPOWER 赌场常见问题",
+      description: "关于 TPOWER 在线赌场访问、注册、登录、游戏、支付与支持的常见问题。",
     },
     {
       label: "常见问题",
@@ -916,8 +927,8 @@ export const pages: Record<string, PageContent> = {
   contact: p(
     "contact",
     {
-      title: "联系我们",
-      description: "就注册、登录与账户问题联系 TPOWER 支持。",
+      title: "联系 TPOWER 支持",
+      description: "通过本官方合作伙伴网站联系 TPOWER 支持，咨询注册、登录与账户问题。",
     },
     {
       label: "联系我们",
@@ -970,20 +981,20 @@ export const pages: Record<string, PageContent> = {
   news: p(
     "news",
     {
-      title: "新闻动态",
-      description: "TPOWER 合作伙伴新闻与计划更新。",
+      title: "TPOWER 新闻",
+      description: "TPOWER 在线赌场与本官方合作伙伴网站的相关动态。",
     },
     {
       label: "新闻动态",
-      title: "合作伙伴 ",
+      title: "TPOWER ",
       titleHighlight: "新闻",
-      description: "TPOWER 合作伙伴计划最新动态。",
+      description: "与 TPOWER 在线赌场访问相关的更新。",
       variant: "dark",
     },
     [
       {
         type: "notice",
-        body: "计划新闻与更新将在发布后陆续刊登于此。敬请关注新资源、计划功能及合作机遇的相关公告。",
+        body: "相关新闻与更新将在发布后陆续刊登于此。敬请关注平台信息与服务说明。",
       },
     ],
   ),
@@ -1034,7 +1045,7 @@ export const pages: Record<string, PageContent> = {
     "terms",
     {
       title: "条款与条件",
-      description: "TPOWER 合作伙伴计划的条款与条件。",
+      description: "使用本 TPOWER 官方合作伙伴网站的条款与条件。",
     },
     {
       label: "法律",
@@ -1083,7 +1094,7 @@ export const pages: Record<string, PageContent> = {
     "privacy",
     {
       title: "隐私政策",
-      description: "TPOWER 合作伙伴网站的隐私政策。",
+      description: "本 TPOWER 官方合作伙伴网站的隐私政策。",
     },
     {
       label: "法律",

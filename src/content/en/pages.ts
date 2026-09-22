@@ -14,8 +14,9 @@ export const pages: Record<string, PageContent> = {
   games: p(
     "games",
     {
-      title: "TPOWER Games",
-      description: "Explore TPOWER online casino game categories including slots, live casino and table games.",
+      title: "TPOWER Casino Games",
+      description:
+        "Explore TPOWER online casino game categories including slots, live casino and table games through this official partner website.",
     },
     {
       label: "Games",
@@ -63,7 +64,8 @@ export const pages: Record<string, PageContent> = {
     "promotions",
     {
       title: "TPOWER Promotions",
-      description: "Learn how TPOWER promotions work through this official partner website. Offer details are confirmed in your account.",
+      description:
+        "View how TPOWER online casino promotions work through this official partner website. Offer details are confirmed in your account after login.",
     },
     {
       label: "Promotions",
@@ -105,8 +107,9 @@ export const pages: Record<string, PageContent> = {
   payment: p(
     "payment",
     {
-      title: "Payment Methods",
-      description: "General information about TPOWER payment options. Exact methods depend on your market and account status.",
+      title: "TPOWER Payment Methods | TPOWER Online Casino",
+      description:
+        "Learn about TPOWER payment options for eligible accounts. Exact deposit and withdrawal methods are confirmed after login.",
     },
     {
       label: "Payment",
@@ -147,8 +150,9 @@ export const pages: Record<string, PageContent> = {
   support: p(
     "support",
     {
-      title: "Customer Support",
-      description: "Get help with TPOWER registration, login, games, payments and account questions through this official partner website.",
+      title: "TPOWER Casino Support",
+      description:
+        "Get help with TPOWER registration, login, games, payments and account questions through this official partner website.",
     },
     {
       label: "Support",
@@ -189,7 +193,7 @@ export const pages: Record<string, PageContent> = {
   about: p(
     "about",
     {
-      title: "About TPOWER",
+      title: "About TPOWER Online Casino",
       description:
         "Learn about TPOWER online casino and this official partner website for registration, login and account access.",
     },
@@ -226,7 +230,7 @@ export const pages: Record<string, PageContent> = {
   "why-tpower": p(
     "why-tpower",
     {
-      title: "Why TPOWER",
+      title: "Why Choose TPOWER Casino",
       description:
         "Discover why players choose TPOWER online casino — games, account access, support, payments and responsible entertainment.",
     },
@@ -813,31 +817,42 @@ export const pages: Record<string, PageContent> = {
     "responsible-gaming",
     {
       title: "Responsible Gaming",
-      description: "Responsible gaming information for TPOWER partners and their audiences.",
+      description: "Responsible gaming guidance for TPOWER online casino entertainment. Play responsibly.",
     },
     {
       label: "Responsible Gaming",
       title: "Responsible ",
       titleHighlight: "Gaming",
-      description: "Promoting casino entertainment responsibly.",
+      description: "Online casino entertainment should remain responsible and controlled.",
       variant: "felt",
     },
     [
       {
         type: "prose",
         paragraphs: [
-          "TPOWER is committed to responsible gaming. Partners play an important role in promoting casino entertainment ethically.",
-          "Partners should never target minors, vulnerable individuals, or use messaging that encourages irresponsible gambling behavior.",
+          "TPOWER online casino entertainment involves risk. Gambling should never be treated as a way to make money or solve financial problems.",
+          "Please play responsibly. Set personal limits, take breaks, and stop if gaming stops being enjoyable.",
         ],
       },
       {
         type: "list",
-        heading: "Partner Guidelines",
+        heading: "Responsible Play Tips",
         items: [
-          "Do not promote to underage audiences",
-          "Include responsible gaming messaging where appropriate",
-          "Avoid suggesting gambling as a solution to financial problems",
-          "Encourage players to set limits and gamble within their means",
+          "Only play with money you can afford to lose",
+          "Do not chase losses",
+          "Set time and spending limits before you play",
+          "Do not allow underage users to access gambling content",
+          "Seek help if gambling becomes difficult to control",
+        ],
+      },
+      {
+        type: "related",
+        heading: "Related",
+        links: [
+          { label: "Support", slug: "support" },
+          { label: "FAQ", slug: "faq" },
+          { label: "Terms", slug: "terms" },
+          { label: "Privacy", slug: "privacy" },
         ],
       },
     ],
@@ -902,8 +917,9 @@ export const pages: Record<string, PageContent> = {
   faq: p(
     "faq",
     {
-      title: "FAQ",
-      description: "Frequently asked questions about TPOWER online casino access, registration, login, games and support.",
+      title: "TPOWER Casino FAQ",
+      description:
+        "Frequently asked questions about TPOWER online casino access, registration, login, games, payments and support.",
     },
     {
       label: "FAQ",
@@ -918,8 +934,8 @@ export const pages: Record<string, PageContent> = {
   contact: p(
     "contact",
     {
-      title: "Contact",
-      description: "Contact TPOWER support for registration, login and account questions.",
+      title: "Contact TPOWER Support",
+      description: "Contact TPOWER support for registration, login and account questions through this official partner website.",
     },
     {
       label: "Contact",
@@ -972,20 +988,20 @@ export const pages: Record<string, PageContent> = {
   news: p(
     "news",
     {
-      title: "News",
-      description: "TPOWER Partner news and program updates.",
+      title: "TPOWER News",
+      description: "News and updates from TPOWER online casino and this official partner website.",
     },
     {
       label: "News",
-      title: "Partner ",
+      title: "TPOWER ",
       titleHighlight: "News",
-      description: "Updates from the TPOWER Partner Program.",
+      description: "Updates related to TPOWER online casino access.",
       variant: "dark",
     },
     [
       {
         type: "notice",
-        body: "Program news and updates will be published here as they become available. Check back for announcements about new resources, program features, and partner opportunities.",
+        body: "News and updates will be published here as they become available. Check back for TPOWER online casino access information and service announcements.",
       },
     ],
   ),
@@ -1036,7 +1052,7 @@ export const pages: Record<string, PageContent> = {
     "terms",
     {
       title: "Terms & Conditions",
-      description: "Terms and conditions for the TPOWER Partner Program.",
+      description: "Terms and conditions for using this official TPOWER partner website.",
     },
     {
       label: "Legal",
@@ -1085,7 +1101,7 @@ export const pages: Record<string, PageContent> = {
     "privacy",
     {
       title: "Privacy Policy",
-      description: "Privacy policy for the TPOWER Partner website.",
+      description: "Privacy policy for this official TPOWER partner website.",
     },
     {
       label: "Legal",
